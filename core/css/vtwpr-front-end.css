@@ -1,0 +1,22 @@
+             /* ************************ */
+            /*Theme Message CSS         */
+            /* ************************ */ 
+            
+            /* Checkout Table */
+            table.vtwpr_shop_table th.product-name {
+              min-width: 170px;
+            }
+            table.vtwpr_shop_table th.product-quantity {
+              min-width: 80px;
+              text-align:center;
+            }            
+            table.vtwpr_shop_table th.product-subtotal {
+              min-width: 120px;
+            }
+            table.vtwpr_shop_table td.product-quantity {
+              text-align:center;
+            } 
+            
+            /*at checkout, block the 'remove' URL from appearing next to a wholesale pricing Deal!!*/
+            tr.coupon-deals a {display:none;}
+      
