@@ -2710,7 +2710,7 @@ DITTO ie10!!
                              
                         $('#popChoiceIn').change(function(){
                             popChoiceInTest();
-                            mirrorPopChoiceInChange();
+                          //  mirrorPopChoiceInChange();
                         });
 
                         function popChoiceInTest() {
@@ -2790,7 +2790,7 @@ DITTO ie10!!
                            
                         $('#popChoiceOut').change(function(){
                             popChoiceOutTest();
-                            mirrorPopChoiceOutChange();
+                          //  mirrorPopChoiceOutChange();
                         });                                
 
                         function popChoiceOutTest() {     

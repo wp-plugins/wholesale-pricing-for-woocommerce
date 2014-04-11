@@ -3,8 +3,8 @@ Contributors: vark
 Donate link: http://www.varktech.com/wp-e-commerce/wholesale-pricing-for-woocommerce/
 Tags: ecommerce, e commerce, e-commerce, commerce, WooCommerce, wordpress ecommerce, store, sales, promotion, advertising, sell, shop, shopping, cart, checkout, configurable, variable, widgets, reports, marketing, deals, price, discount, dynamic pricing, group pricing, wholesale, membership, role, promotion, bogo
 Requires at least: 3.3
-Tested up to: 3.8.1
-Stable tag: 1.0
+Tested up to: 3.8.2
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -102,10 +102,17 @@ Direct support requests can be made here on the support tab, or at the [Support]
 
 == Changelog ==
 
+= 1.0.1 - 2014-04-10 =
+* Fix - install warning
+
+* 
 = 1.0 - 2014-03-31 =
 * Initial Public Release
 
 == Upgrade Notice ==
+
+= 1.0.1 - 2014-04-10 =
+* Fix - install warning
 
 = 1.0 - 2014-03-31 =
 * Initial Public Release

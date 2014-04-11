@@ -89,9 +89,9 @@ class VTWPR_Rules_UI_Framework {
                     'class'    => '',
                     'value'    => 'simple',
                     //Part of the store on sale
-                    'title'    => __('Catalog Discount by Category, Logged-in Role ... ', 'vtwpr') /*,
+                    'title'    => __('Discount by Category, Logged-in Role, Product ... ', 'vtwpr') /*,
                     'title-catalog'
-                               => __('Catalog Discount by Category, Logged-in Role ... ', 'vtwpr')*/    
+                               => __('Discount by Category, Logged-in Role, Product ... ', 'vtwpr')*/    
                    ),                                     
 
                   array (
@@ -99,9 +99,9 @@ class VTWPR_Rules_UI_Framework {
                     'class'    => '',
                     'value'    => 'all',
                     //all of the store on sale
-                    'title'    => __('Whole Catalog on sale', 'vtwpr'), //Discount the whole catalog    //vs Discount anything in the cart 
+                    'title'    => __('Discount Whole Store', 'vtwpr'), //Discount the whole catalog    //vs Discount anything in the cart 
                     'title-catalog'   
-                               => __('Whole Catalog on sale', 'vtwpr')
+                               => __('Discount Whole Store', 'vtwpr')
                    )                   
                  )
             ), 

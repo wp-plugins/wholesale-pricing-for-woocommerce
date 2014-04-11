@@ -717,7 +717,8 @@ class VTWPR_Apply_Rules{
         //$per_unit_savings = $total_savings / $forThePriceOf_Divisor;
 
         //compute remainder
-        $per_unit_savings_2decimals = bcdiv($total_savings , $forThePriceOf_Divisor , 2);     
+        //$per_unit_savings_2decimals = bcdiv($total_savings , $forThePriceOf_Divisor , 2);  
+        $per_unit_savings_2decimals = round( ($total_savings / $forThePriceOf_Divisor) , 2);     
         $running_total =  $per_unit_savings_2decimals * $forThePriceOf_Divisor;
         
         $remainder = $total_savings - $running_total;
@@ -769,7 +770,8 @@ class VTWPR_Apply_Rules{
         $total_savings = $cart_group_total_price - $cart_group_new_fixed_price;
 
         //compute remainder
-        $per_unit_savings_2decimals = bcdiv($total_savings , $forThePriceOf_Divisor , 2);     
+        //$per_unit_savings_2decimals = bcdiv($total_savings , $forThePriceOf_Divisor , 2);
+        $per_unit_savings_2decimals = round( ($total_savings / $forThePriceOf_Divisor) , 2);     
         $running_total =  $per_unit_savings_2decimals * $forThePriceOf_Divisor;
         
         $remainder = $total_savings - $running_total;
@@ -857,8 +859,9 @@ class VTWPR_Apply_Rules{
         
 
         //compute remainder
-        $per_unit_savings_2decimals = bcdiv($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_amt_count'] , $unit_count , 2);     
-     
+        //$per_unit_savings_2decimals = bcdiv($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_amt_count'] , $unit_count , 2);     
+        $per_unit_savings_2decimals = round( ($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_amt_count'] / $unit_count ) , 2);
+        
         $running_total =  $per_unit_savings_2decimals * $unit_count;
         
         $remainder = $vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_amt_count'] - $running_total;
@@ -1016,7 +1019,8 @@ class VTWPR_Apply_Rules{
     } else {
       //compute yousave_pct_at_upd_begin
       $computed_pct =  $curr_prod_array['prod_discount_amt'] /  $curr_prod_array['prod_unit_price'] ;
-      $computed_pct_2decimals = bcdiv($curr_prod_array['prod_discount_amt'] , $curr_prod_array['prod_unit_price'] , 2); 
+      //$computed_pct_2decimals = bcdiv($curr_prod_array['prod_discount_amt'] , $curr_prod_array['prod_unit_price'] , 2);
+      $computed_pct_2decimals = round( ($curr_prod_array['prod_discount_amt'] / $curr_prod_array['prod_unit_price'] ) , 2); 
       $remainder = $computed_pct - $computed_pct_2decimals;
       if ($remainder > 0.005) {
         $yousave_pct = ($computed_pct_2decimals + .01) * 100;
@@ -1091,7 +1095,8 @@ class VTWPR_Apply_Rules{
             
             // $yousave_pct = $yousave_amt / $curr_prod_array['prod_unit_price'] * 100;        
             //compute remainder
-            $yousave_pct_2decimals = bcdiv($curr_prod_array['prod_discount_amt'] , $curr_prod_array['prod_unit_price'] , 2);     
+            //$yousave_pct_2decimals = bcdiv($curr_prod_array['prod_discount_amt'] , $curr_prod_array['prod_unit_price'] , 2);
+            $yousave_pct_2decimals = round( ($curr_prod_array['prod_discount_amt'] / $curr_prod_array['prod_unit_price'] ) , 2);     
             $remainder = $yousave_pct_temp - $yousave_pct_2decimals;
             if ($remainder > 0.005) {
               $yousave_pct = ($yousave_pct_2decimals + .01) * 100;
@@ -1109,7 +1114,9 @@ class VTWPR_Apply_Rules{
     $yousave_total_unit_price = $vtwpr_cart->cart_items[$k]->yousave_total_unit_price + $curr_prod_array['prod_unit_price'];  
     //yousave pct whole number = (total discount amount / (orig unit price * number of units discounted))
     $yousave_pct_prod_temp = $yousave_product_total_amt / $yousave_total_unit_price;
-    $yousave_pct_prod_2decimals = bcdiv($yousave_product_total_amt , $yousave_total_unit_price , 2);     
+    //$yousave_pct_prod_2decimals = bcdiv($yousave_product_total_amt , $yousave_total_unit_price , 2);
+    $yousave_pct_prod_2decimals = round( ($yousave_product_total_amt / $yousave_total_unit_price ) , 2);
+         
     $remainder = $yousave_pct_prod_temp - $yousave_pct_prod_2decimals;
     if ($remainder > 0.005) {
       $yousave_product_total_pct = ($yousave_pct_prod_2decimals + .01) * 100;
@@ -1196,7 +1203,9 @@ class VTWPR_Apply_Rules{
             
             // $yousave_pct = $yousave_amt / $curr_prod_array['prod_unit_price'] * 100;        
             //compute remainder
-            $yousave_pct_2decimals = bcdiv($curr_prod_array['prod_discount_amt'] , $curr_prod_array['prod_unit_price'] , 2);     
+            //$yousave_pct_2decimals = bcdiv($curr_prod_array['prod_discount_amt'] , $curr_prod_array['prod_unit_price'] , 2); 
+            $yousave_pct_2decimals = round( ($curr_prod_array['prod_discount_amt'] / $curr_prod_array['prod_unit_price'] ) , 2);
+                
             $remainder = $yousave_pct_temp - $yousave_pct_2decimals;
             if ($remainder > 0.005) {
               $yousave_pct = ($yousave_pct_2decimals + .01) * 100;
@@ -1294,7 +1303,9 @@ class VTWPR_Apply_Rules{
       $yousave_total_unit_price = $vtwpr_cart->cart_items[$k]->yousave_total_unit_price + $curr_prod_array['prod_unit_price'];  
       //yousave pct whole number = (total discount amount / (orig unit price * number of units discounted))
       $yousave_pct_prod_temp = $yousave_product_total_amt / $yousave_total_unit_price;
-      $yousave_pct_prod_2decimals = bcdiv($yousave_product_total_amt , $yousave_total_unit_price , 2);     
+      //$yousave_pct_prod_2decimals = bcdiv($yousave_product_total_amt , $yousave_total_unit_price , 2);
+      $yousave_pct_prod_2decimals = round( ($yousave_product_total_amt / $yousave_total_unit_price ) , 2);
+           
       $remainder = $yousave_pct_prod_temp - $yousave_pct_prod_2decimals;
       if ($remainder > 0.005) {
         $yousave_product_total_pct = ($yousave_pct_prod_2decimals + .01) * 100;
@@ -2269,6 +2280,61 @@ class VTWPR_Apply_Rules{
       //autoadds AREA
       //EDITED * + * +  * + * +  * + * +  * + * + 
        
+      //EXCEPT ====>>>>>
+                                      
+  
+  //***********************************************************
+  // If a product(s) has been given a 'Free' discount, it can't get
+  //     any further discounts.
+  //   Roll the product 'free' qty out of the rest of the rules actionPop arrays
+  //      so that they can't be found when searching for other discounts
+  //***********************************************************     
+   public  function vtwpr_roll_free_products_out_of_other_rules($i) {
+		global $vtwpr_cart, $vtwpr_rules_set, $vtwpr_info, $vtwpr_setup_options, $vtwpr_rule;     
+
+    $sizeof_ruleset = sizeof($vtwpr_rules_set);
+    
+    //for this rule's free_product_array, roll out these products from all other rules...
+    foreach($vtwpr_rules_set[$i]->free_product_array as $free_product_key => $free_qty) {  
+      
+      for($rule=0; $rule < $sizeof_ruleset; $rule++) {
+
+        //skip if we're on the rule initiating the free product array logic
+        if  ($vtwpr_rules_set[$rule]->post_id == $vtwpr_rules_set[$i]->post_id) {
+          continue; 
+        }
+        
+        //delete as many of the product from the actionpop array as there are free qty
+        $delete_qty = $free_qty;
+        foreach ($vtwpr_rules_set[$rule]->actionPop_exploded_found_list as $actionPop_key => $actionPop_exploded_found_list )  {
+           if ($actionPop_exploded_found_list['prod_id'] == $free_product_key) {
+              
+              //as each row has a quantity of 1, unset is the way to go....
+              //from  http://stackoverflow.com/questions/2304570/how-to-delete-object-from-array-inside-foreach-loop
+              unset( $vtwpr_rules_set[$rule]->actionPop_exploded_found_list[$actionPop_key]);           
+              
+              $delete_qty -= 1;
+           }
+           
+           if ($delete_qty == 0) {
+             break;
+           }
+           
+        } //end "for" loop unsetting the free product
+        
+        //if any unsets were done, need to re-knit the array so that there are no gaps...
+        //    from    http://stackoverflow.com/questions/1748006/what-is-the-best-way-to-delete-array-item-in-php/1748132#1748132
+        //            $a = array_values($a);
+        if ($delete_qty < $free_qty) {          
+          $vtwpr_rules_set[$rule]->actionPop_exploded_found_list = array_values($vtwpr_rules_set[$rule]->actionPop_exploded_found_list);
+        }
+      
+      } //end "for"  rule loop
+      
+    } //end foreach free product
+    
+    return;
+  }  
 
 
    
