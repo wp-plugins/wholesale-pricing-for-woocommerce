@@ -3,7 +3,7 @@
 Plugin Name: VarkTech Wholesale Pricing for WooCommerce
 Plugin URI: http://varktech.com
 Description: An e-commerce add-on for WooCommerce, supplying Wholesale Pricing functionality.
-Version: 1.0.1
+Version: 1.0.2
 Author: Vark
 Author URI: http://varktech.com
 */
@@ -43,9 +43,9 @@ class VTWPR_Controller{
       header("Pragma: no-cache");
     } 
     
-		define('VTWPR_VERSION',                               '1.0.1');
-    define('VTWPR_MINIMUM_PRO_VERSION',                   '1.0.1');
-    define('VTWPR_LAST_UPDATE_DATE',                      '2014-04-10');
+		define('VTWPR_VERSION',                               '1.0.2');
+    define('VTWPR_MINIMUM_PRO_VERSION',                   '1.0.2');
+    define('VTWPR_LAST_UPDATE_DATE',                      '2014-04-14');
     define('VTWPR_DIRNAME',                               ( dirname( __FILE__ ) ));
     define('VTWPR_URL',                                   plugins_url( '', __FILE__ ) );
     define('VTWPR_EARLIEST_ALLOWED_WP_VERSION',           '3.3');   //To pick up wp_get_object_terms fix, which is required for vtwpr-parent-functions.php
@@ -542,7 +542,7 @@ class VTWPR_Controller{
   	
     $wpdb->hide_errors();    
   	$collate = '';
-    if ( $wpdb->supports_collation() ) {
+    if ( $wpdb->has_cap( 'collation' ) ) {  //mwn04142014
   		if( ! empty($wpdb->charset ) ) $collate .= "DEFAULT CHARACTER SET $wpdb->charset";
   		if( ! empty($wpdb->collate ) ) $collate .= " COLLATE $wpdb->collate";
     }

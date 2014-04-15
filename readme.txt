@@ -3,8 +3,8 @@ Contributors: vark
 Donate link: http://www.varktech.com/wp-e-commerce/wholesale-pricing-for-woocommerce/
 Tags: ecommerce, e commerce, e-commerce, commerce, WooCommerce, wordpress ecommerce, store, sales, promotion, advertising, sell, shop, shopping, cart, checkout, configurable, variable, widgets, reports, marketing, deals, price, discount, dynamic pricing, group pricing, wholesale, membership, role, promotion, bogo
 Requires at least: 3.3
-Tested up to: 3.8.2
-Stable tag: 1.0.1
+Tested up to: 3.8.3
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,9 +16,8 @@ Power your store to greater success with wholesale pricing and sales promotions!
 
 = What can you do with Wholesale Pricing? =
 
-*   Catalog Wholesale pricing
-*   Catalog Category Pricing
-*   Catalog SALE Product and Variation Pricing 
+*   Wholesale  Discount pricing
+*   Catalog Sale Product and Variation Discount Pricing 
 *   Schedulable
 *   Works with WooCommerce 2.1+
 
@@ -26,10 +25,10 @@ Power your store to greater success with wholesale pricing and sales promotions!
  
 Wholesale Pricing can
 
-*   *Catalog Pricing*
-     - Show the discount in the catalog pricing. (by Logged-in Role (Wholesaler, Membership), Category, and others). 
+*   *Wholesale Catalog Pricing*
+     - Show the discount in the catalog pricing., by Logged-in Role (Wholesaler, Membership), Category, and others. 
 
-*   *Sale Pricing*
+*   *Group Sale Pricing*
      - Use a single rule to put an entire Category (or other group) on sale.  Just like having a sale price on a product, except
      -    a single rule can apply to a big group, without updating each product individually!!! 
 
@@ -65,6 +64,7 @@ The Pro version  gives you incredible control over rule groups - by category, pr
 
 = Additional Plugins by VarkTech.com =
 1. [Pricing Deals for WooCommerce](http://wordpress.org/extend/plugins/pricing-deals-for-woocommerce)
+1. [Cart Deals for WooCommerce](http://wordpress.org/extend/plugins/cart-deals-for-woocommerce)
 1. [Minimum Purchase for WooCommerce](http://wordpress.org/extend/plugins/minimum-purchase-for-woocommerce)
 1. [Maximum Purchase for WooCommerce](http://wordpress.org/extend/plugins/maximum-purchase-for-woocommerce) 
 1. [Min or Max Purchase for WooCommerce](http://wordpress.org/extend/plugins/min-or-max-purchase-for-woocommerce)   
@@ -102,6 +102,10 @@ Direct support requests can be made here on the support tab, or at the [Support]
 
 == Changelog ==
 
+= 1.0.2 - 2014-04-14 =
+* Fix - warnings on update error
+* Fix - Change to collation syntax on install
+
 = 1.0.1 - 2014-04-10 =
 * Fix - install warning
 
@@ -110,6 +114,10 @@ Direct support requests can be made here on the support tab, or at the [Support]
 * Initial Public Release
 
 == Upgrade Notice ==
+
+= 1.0.2 - 2014-04-14 =
+* Fix - warnings on update error
+* Fix - Change to collation syntax on install
 
 = 1.0.1 - 2014-04-10 =
 * Fix - install warning

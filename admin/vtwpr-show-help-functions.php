@@ -2274,8 +2274,6 @@
                 </ol>
                 <?php        
            echo '<strong>'; _e("Product-level Deal Exclusion", 'vtwpr');  echo '</strong>';
-           echo '<br><br>';
-           echo '<strong>'; _e('Maximum Deal Limits, including "One Per Customer" limit', 'vtwpr');  echo '</strong>';
         break;                
       case 'onlyShowsIfJSerror':
            ?>  
