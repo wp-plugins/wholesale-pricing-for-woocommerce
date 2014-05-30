@@ -27,7 +27,11 @@ class VTWPR_Rules_UI{
     add_action( 'wp_ajax_noprov_vtwpr_ajax_load_variations_out', array(&$this, 'vtwpr_ajax_load_variations_out') );     
       
     //add a metabox to the **parent product custom post type page**
-    add_action( 'add_meta_boxes_' .$vtwpr_info['parent_plugin_cpt'] , array(&$this, 'vtwpr_parent_product_meta_box_cntl') );
+    //v1.0.3 begin  ==>> all in one seo conflicts with this box, don't show when that plugin is active
+    if ( ! defined( 'AIOSEOP_VERSION' ) ) {
+      add_action( 'add_meta_boxes_' .$vtwpr_info['parent_plugin_cpt'] , array(&$this, 'vtwpr_parent_product_meta_box_cntl') );
+    } 
+    // v1.0.3 end
 	}
                                
     
@@ -305,8 +309,9 @@ class VTWPR_Rules_UI{
         <input type="hidden" id="firstTimeBackFromServer" name="firstTimeBackFromServer" value="yes" />        
         <input type="hidden" id="upperSelectsFirstTime" name="upperSelectsFirstTime" value="yes" />
         <input type="hidden" id="upperSelectsDoneSw" name="upperSelectsDoneSw" value="" />
-        <input type="hidden" id="catalogCheckoutMsg" name="catalogCheckoutMsg" value="<?php echo __('Message unused for Catalog Discount', 'vtwpr');?>" />
-        <input type="hidden" id="vtwpr-docTitle" name="vtwpr-docTitle" value="<?php _e('- Help! -', 'vtwpr');?>" /> 
+        <input type="hidden" id="catalogCheckoutMsg" name="catalogCheckoutMsg" value="<?php echo __('Message unused for Catalog Discount', 'vtwpr');?>" />        
+        <input type="hidden" id="vtwpr-moreInfo" name="vtwpr-docTitle" value="<?php _e('More Info', 'vtwpr');?>" /> <?php //v1.0.5 added 2nd button ?>
+        <input type="hidden" id="vtwpr-docTitle" name="vtwpr-docTitle" value="<?php _e('- Help! -', 'vtwpr');?>" />         
         <input type="hidden" id="fullMsg" name="fullMsg" value="<?php echo $vtwpr_info['default_full_msg'];?>" /> 
         
         <?php //************************ ?>
@@ -320,7 +325,7 @@ class VTWPR_Rules_UI{
         <input type="hidden" id="discount_product_short_msg" name="discount_product_short_msg" value="none" /> 
         <input type="hidden" id="shortMsg" name="shortMsg" value="none" />  
         <input type="hidden" id="cumulativeRulePricing" name="cumulativeRulePricing" value="yes" /> 
-        <input type="hidden" id="cumulativeSalePricing" name="cumulativeSalePricing" value="no" /> 
+        <input type="hidden" id="cumulativeSalePricing" name="cumulativeSalePricing" value="addToSalePrice" /> 
         <input type="hidden" id="cumulativeCouponPricing" name="cumulativeCouponPricing" value="yes" /> 
         <input type="hidden" id="popChoiceOut" name="popChoiceOut" value="sameAsInPop" /> 
         <input type="hidden" id="action_amt_type_0" name="action_amt_type_0" value="none" />      
@@ -400,8 +405,7 @@ class VTWPR_Rules_UI{
         <?php //Statuses used for switching of the upper dropdowns ?>
         <input type="hidden" id="select_status_sw"  name="select_status_sw"  value="no" />
         
-        <?php //pass these two messages up to JS, translated here if necessary ?>
-        <input type="hidden" id="fullMsg" name="fullMsg" value="<?php echo $vtwpr_info['default_full_msg'];?>" />    
+        <?php //pass these two messages up to JS, translated here if necessary ?>  
         <input type="hidden" id="shortMsg" name="shortMsg" value="<?php echo $vtwpr_info['default_short_msg'];?>" /> 
   
         <input id="pluginVersion" type="hidden" value="<?php if(defined('VTWPR_PRO_DIRNAME')) { echo "proVersion"; } else { echo "freeVersion"; } ?>" name="pluginVersion" />  
@@ -713,6 +717,8 @@ class VTWPR_Rules_UI{
                     if ($vtwpr_rule->inPop_varProdID) {
                       $product_ID = $vtwpr_rule->inPop_varProdID; 
                       $product_variation_IDs = vtwpr_get_variations_list($product_ID);
+                    } else {
+                      $product_variation_IDs = array();  //v1.0.3
                     }
                     /* ************************************************
                     **   Get Variations Button for Rule screen
@@ -853,7 +859,9 @@ class VTWPR_Rules_UI{
                     if ($vtwpr_rule->actionPop_varProdID) {
                       $product_ID = $vtwpr_rule->actionPop_varProdID; 
                       $product_variation_IDs = vtwpr_get_variations_list($product_ID);
-                    }
+                    }   else {                           
+                      $product_variation_IDs = array();  //v1.0.3
+                    }  
                     /* ************************************************
                     **   Get Variations Button for Rule screen
                     *     ==>>> get the product id from $_REQUEST['varProdID'];  in the receiving ajax routine. 
@@ -1315,7 +1323,7 @@ class VTWPR_Rules_UI{
     }
     
     $product_variation_IDs = vtwpr_get_variations_list($product_ID);
-    if ($product_variation_IDs <= ' ') { 
+    if (sizeof($product_variation_IDs) == 0) {     //v1.0.3
       $vtwpr_rule->rule_error_message[] = __('Product has no Variations. Product Name = ', 'vtwpr') .$test_post->post_title.   __('<br><br> Please use "Single Product Only" option, above.', 'vtwpr') ;
       if ( $vtwpr_setup_options['debugging_mode_on'] == 'yes' ){
           $vtwpr_rule->rule_error_message[0] =  __('<br><br>Product ID in error = <span id="varProdID-error-ID">', 'vtwpr')   .$product_ID .    __('</span>', 'vtwpr') ;
@@ -1452,7 +1460,7 @@ class VTWPR_Rules_UI{
         $vtwpr_rule->rule_deal_info[0]['discount_lifetime_max_amt_type'] = 'none';
         $vtwpr_rule->rule_deal_info[0]['discount_rule_cum_max_amt_type'] = 'none'; 
         $vtwpr_rule->cumulativeRulePricing = 'yes';  
-        $vtwpr_rule->cumulativeSalePricing = 'no';  
+        $vtwpr_rule->cumulativeSalePricing = 'addToSalePrice';   //v1.0.3 
         $vtwpr_rule->cumulativeCouponPricing = 'yes';
                //discount occurs 5 times
         $vtwpr_rule->ruleApplicationPriority_num = '10';         

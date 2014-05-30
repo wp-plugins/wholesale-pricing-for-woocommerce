@@ -3,7 +3,7 @@
 Plugin Name: VarkTech Wholesale Pricing for WooCommerce
 Plugin URI: http://varktech.com
 Description: An e-commerce add-on for WooCommerce, supplying Wholesale Pricing functionality.
-Version: 1.0.2
+Version: 1.0.3
 Author: Vark
 Author URI: http://varktech.com
 */
@@ -43,15 +43,16 @@ class VTWPR_Controller{
       header("Pragma: no-cache");
     } 
     
-		define('VTWPR_VERSION',                               '1.0.2');
-    define('VTWPR_MINIMUM_PRO_VERSION',                   '1.0.2');
-    define('VTWPR_LAST_UPDATE_DATE',                      '2014-04-14');
+		define('VTWPR_VERSION',                               '1.0.3');
+    define('VTWPR_MINIMUM_PRO_VERSION',                   '1.0.3');
+    define('VTWPR_LAST_UPDATE_DATE',                      '2014-05-29');
     define('VTWPR_DIRNAME',                               ( dirname( __FILE__ ) ));
     define('VTWPR_URL',                                   plugins_url( '', __FILE__ ) );
     define('VTWPR_EARLIEST_ALLOWED_WP_VERSION',           '3.3');   //To pick up wp_get_object_terms fix, which is required for vtwpr-parent-functions.php
     define('VTWPR_EARLIEST_ALLOWED_PHP_VERSION',          '5');
     define('VTWPR_PLUGIN_SLUG',                           plugin_basename(__FILE__));
-   
+    define('VTWPR_PRO_PLUGIN_NAME',                      'Varktech Pricing Deals Pro for WooCommerce');    //v1.0.3
+       
     require_once ( VTWPR_DIRNAME . '/woo-integration/vtwpr-parent-definitions.php');
             
     // overhead stuff
@@ -66,21 +67,22 @@ class VTWPR_Controller{
     //    picks up ONLY the 1st publish, save_post works thereafter...   
     //      (could possibly conflate all the publish/save actions (4) into the publish_post action...)
     /*  =============+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */    
-    add_action( 'draft_to_publish',       array( &$this, 'vtwpr_admin_update_rule_cntl' )); 
-    add_action( 'auto-draft_to_publish',  array( &$this, 'vtwpr_admin_update_rule_cntl' ));
-    add_action( 'new_to_publish',         array( &$this, 'vtwpr_admin_update_rule_cntl' )); 			
-    add_action( 'pending_to_publish',     array( &$this, 'vtwpr_admin_update_rule_cntl' ));
-    
-    //standard mod/del/trash/untrash
-    add_action('save_post',     array( &$this, 'vtwpr_admin_update_rule_cntl' ));
-    add_action('delete_post',   array( &$this, 'vtwpr_admin_delete_rule' ));    
-    add_action('trash_post',    array( &$this, 'vtwpr_admin_trash_rule' ));
-    add_action('untrash_post',  array( &$this, 'vtwpr_admin_untrash_rule' ));
-    /*  =============+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-    
-    //get rid of bulk actions on the edit list screen, which aren't compatible with this plugin's actions...
-    add_action('bulk_actions-edit-vtwpr-rule', array($this, 'vtwpr_custom_bulk_actions') ); 
-
+    if (is_admin()) {   //v1.03   only add during is_admin    
+        add_action( 'draft_to_publish',       array( &$this, 'vtwpr_admin_update_rule_cntl' )); 
+        add_action( 'auto-draft_to_publish',  array( &$this, 'vtwpr_admin_update_rule_cntl' ));
+        add_action( 'new_to_publish',         array( &$this, 'vtwpr_admin_update_rule_cntl' )); 			
+        add_action( 'pending_to_publish',     array( &$this, 'vtwpr_admin_update_rule_cntl' ));
+        
+        //standard mod/del/trash/untrash
+        add_action('save_post',     array( &$this, 'vtwpr_admin_update_rule_cntl' ));
+        add_action('delete_post',   array( &$this, 'vtwpr_admin_delete_rule' ));    
+        add_action('trash_post',    array( &$this, 'vtwpr_admin_trash_rule' ));
+        add_action('untrash_post',  array( &$this, 'vtwpr_admin_untrash_rule' ));
+        /*  =============+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        
+        //get rid of bulk actions on the edit list screen, which aren't compatible with this plugin's actions...
+        add_action('bulk_actions-edit-vtwpr-rule', array($this, 'vtwpr_custom_bulk_actions') ); 
+    } //v1.03  end
 	}   //end constructor
 
   	                                                             
@@ -118,8 +120,9 @@ class VTWPR_Controller{
     }
 
     $vtwpr_setup_options = get_option( 'vtwpr_setup_options' );  //put the setup_options into the global namespace 
- 
-    //************
+    
+    vtwpr_debug_options();  //v1.0.5
+      
             
     /*  **********************************
         Set GMT time zone for Store 
@@ -149,8 +152,14 @@ class VTWPR_Controller{
             
         //always check if the manually created coupon codes are there - if not create them.
        // vtwpr_woo_maybe_create_coupon_types();   
- 
-     
+        
+        //v1.0.3 begin
+        if ( (defined('VTWPR_PRO_DIRNAME')) &&
+             (version_compare(VTWPR_PRO_VERSION, VTWPR_MINIMUM_PRO_VERSION) < 0) ) {    //'<0' = 1st value is lower  
+          add_action( 'admin_notices',array(&$this, 'vtwpr_admin_notice_version_mismatch') );            
+        }
+        //v1.0.3 begin 
+          
     } else {
 
       //  add_action( "wp_enqueue_scripts", array(&$this, 'vtwpr_enqueue_frontend_scripts'), 1 );    //priority 1 to run 1st, so front-end-css can be overridden by another file with a dependancy
@@ -210,9 +219,9 @@ class VTWPR_Controller{
   **   Admin - Remove bulk actions on edit list screen, actions don't work the same way as onesies...
   ***************************************************/ 
   function vtwpr_custom_bulk_actions($actions){
-    
+    //v1.03  add  ".inline.hide-if-no-js, .view" to display:none; list
     ?> 
-    <style type="text/css"> #delete_all {display:none;} /*kill the 'empty trash' buttons, for the same reason*/ </style>
+    <style type="text/css"> #delete_all, .inline.hide-if-no-js, .view  {display:none;} /*kill the 'empty trash' buttons, for the same reason*/ </style>
     <?php
     
     unset( $actions['edit'] );
@@ -484,19 +493,9 @@ class VTWPR_Controller{
         add_action( 'admin_notices', create_function( '', "echo '$admin_notices';" ) );
         return;         
     }
-
      
   }
- 
-  
-   public function vtwpr_admin_notice_version_mismatch() {
-      $message  =  '<strong>' . __('Looks like you\'re running an older version of Wholesale Pricing Pro.' , 'vtwpr') .'<br><br>' . __('Your Pro Version = ' , 'vtwpr') .VTWPR_PRO_VERSION.  __(' and the minimum required pro version = ' , 'vtwpr') .VTWPR_MINIMUM_PRO_VERSION. '</strong>' ;
-      $message .=  '<br><br>' . __('Please delete the old Wholesale Pricing Pro plugin from your installation via ftp, go to http://www.varktech.com/download-pro-plugins/ , download and install the newest Wholesale Pricing Pro version.'  , 'vtwpr');
-      $admin_notices = '<div id="message" class="error fade" style="background-color: #FFEBE8 !important;"><p>' . $message . ' </p></div>';
-      echo $admin_notices;
-      return;    
-  }   
-  
+
 
    public function vtwpr_admin_notice_coupon_enable_required() {
       $message  =  '<strong>' . __('In order for the Wholesale Pricing plugin to function successfully, the Woo Coupons Setting must be on, and it is currently off.' , 'vtwpr') . '</strong>' ;
@@ -505,7 +504,21 @@ class VTWPR_Controller{
       echo $admin_notices;
       return;    
   } 
-    
+            
+   //v1.0.3 begin                          
+   public function vtwpr_admin_notice_version_mismatch() {
+      $message  =  '<strong>' . __('Please also update plugin: ' , 'vtwpr') . ' &nbsp;&nbsp;'  .VTWPR_PRO_PLUGIN_NAME . '</strong>' ;
+      $message .=  '<br>&nbsp;&nbsp;&bull;&nbsp;&nbsp;' . __('Your Pro Version = ' , 'vtwpr') .VTWPR_PRO_VERSION. ' &nbsp;&nbsp;' . __(' The Minimum Required Pro Version = ' , 'vtwpr') .VTWPR_MINIMUM_PRO_VERSION ;      
+      $message .=  '<br>&nbsp;&nbsp;&bull;&nbsp;&nbsp;' . __('Please delete the old Pro plugin from your installation via ftp.'  , 'vtwpr');
+      $message .=  '<br>&nbsp;&nbsp;&bull;&nbsp;&nbsp;' . __('Go to ', 'vtwpr');
+      $message .=  '<a target="_blank" href="http://www.varktech.com/download-pro-plugins/">Varktech Downloads</a>';
+      $message .=   __(', download and install the newest <strong>'  , 'vtwpr') .VTWPR_PRO_PLUGIN_NAME. '</strong>' ;
+      
+      $admin_notices = '<div id="message" class="error fade" style="background-color: #FFEBE8 !important;"><p>' . $message . ' </p></div>';
+      echo $admin_notices;
+      return;    
+  }   
+   //v1.0.3 end 
     
   /* ************************************************
   **   Admin - **Uninstall** Hook and cleanup

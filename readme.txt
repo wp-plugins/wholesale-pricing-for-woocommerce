@@ -4,7 +4,7 @@ Donate link: http://www.varktech.com/wp-e-commerce/wholesale-pricing-for-woocomm
 Tags: ecommerce, e commerce, e-commerce, commerce, WooCommerce, wordpress ecommerce, store, sales, promotion, advertising, sell, shop, shopping, cart, checkout, configurable, variable, widgets, reports, marketing, deals, price, discount, dynamic pricing, group pricing, wholesale, membership, role, promotion, bogo
 Requires at least: 3.3
 Tested up to: 3.9
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -102,6 +102,20 @@ Direct support requests can be made here on the support tab, or at the [Support]
 
 == Changelog ==
 
+= 1.0.3 - 2014-5-29 =
+* Fix - replacement BCMATH  functions
+* Fix - close comment above function in parent-cart-validation.php
+* Fix - framework, removed (future) upcharge... , fix pricing-type-simple for catalog
+* Fix - framework, pricing-type discount by catalog Option renamed
+* Fix - js for cart simple discount was disallowing discount limiits in error
+* Fix - warnings on apply
+* Fix - cartWidget print option corrected
+* Fix - Get group repeat logic
+* Enhancement - e_notices made switchable, based on 'Test Debugging Mode Turned On' settings switch
+* Enhancement - debugging_mode output to error log
+* Change - cumulativeSalePricing switch default now = 'Yes - Apply Discount to Product Price, even if On Sale' - UI + JS chg
+* Fix - apply rule free catalog product issue repaired
+
 = 1.0.2 - 2014-04-14 =
 * Fix - warnings on update error
 * Fix - Change to collation syntax on install
@@ -114,6 +128,19 @@ Direct support requests can be made here on the support tab, or at the [Support]
 * Initial Public Release
 
 == Upgrade Notice ==
+
+= 1.0.3 - 2014-5-01 =
+* Fix - if BCMATH not installed with PHP by host, replacement functions
+* Fix - add in missing close comment above function in parent-cart-validation.php
+* Fix - framework, removed (future) upcharge... , fix pricing-type-simple for catalog
+* Fix - framework, pricing-type discount by catalog Option renamed
+* Fix - js for cart simple discount was disallowing discount limiits in error
+* Fix - warnings on apply
+* Fix - cartWidget print option corrected
+* Fix - Get group repeat logic
+* Enhancement - e_notices made switchable, based on 'Test Debugging Mode Turned On' settings switch
+* Enhancement - debugging_mode output to error log
+* Change - cumulativeSalePricing switch default now = 'Yes - Apply Discount to Product Price, even if On Sale' - UI + JS chg
 
 = 1.0.2 - 2014-04-14 =
 * Fix - warnings on update error

@@ -195,7 +195,7 @@ class VTWPR_Rule {
    
      //     all/each/any     
      public  $specChoice_out;  //              any - max number  :: CHANGE TO THRESSHOLD NUMBER   that gateway group is applied to     
-     public  $anyChoiceout_max;
+     public  $anyChoiceOut_max;
      //boGO number (get ONE)  type =>  unit/$$$/all/cheapest/most expensive
      public  $amtSelectedOut;
 
@@ -374,7 +374,6 @@ class VTWPR_Rule {
      //mwn0403
      public  $rule_type_framework_key;
      public  $rule_type_name; 
-     public  $anyChoiceOut_max;
      public  $actionPop_threshHold_amt;
      
          

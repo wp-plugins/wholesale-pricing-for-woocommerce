@@ -76,13 +76,17 @@ class VTWPR_Apply_Rules{
     
 
     if ( $vtwpr_setup_options['debugging_mode_on'] == 'yes' ){   
-      echo 'vtwpr_info <pre>'.print_r($vtwpr_info, true).'</pre>' ;
+      error_log( print_r(  '$vtwpr_info', true ) );
+      error_log( var_export($vtwpr_info, true ) );
       session_start();    //mwntest
-      echo 'SESSION data <pre>'.print_r($_SESSION, true).'</pre>' ;      
-      echo '<pre>'.print_r($vtwpr_rules_set, true).'</pre>' ; 
-      echo '<pre>'.print_r($vtwpr_cart, true).'</pre>' ;
-      echo '<pre>'.print_r($vtwpr_setup_options, true).'</pre>' ;
-      echo '<pre>'.print_r($vtwpr_info, true).'</pre>' ;    
+      error_log( print_r(  '$_SESSION', true ) );
+      error_log( var_export($_SESSION, true ) );
+      error_log( print_r(  '$vtwpr_rules_set', true ) );
+      error_log( var_export($vtwpr_rules_set, true ) );
+      error_log( print_r(  '$vtwpr_cart', true ) );
+      error_log( var_export($vtwpr_cart, true ) );
+      error_log( print_r(  '$vtwpr_setup_options', true ) );
+      error_log( var_export($vtwpr_setup_options, true ) );     
     }
     
     return;      
@@ -183,7 +187,7 @@ class VTWPR_Apply_Rules{
 
         //only do this check if the product is on special!!
         if ($vtwpr_cart->cart_items[$k]->product_is_on_special == 'yes')  { 
-          $do_continue;
+          $do_continue = '';  //v1.0.3 set = to ''
           switch( $vtwpr_rules_set[$i]->cumulativeSalePricing) {
             case 'no':              
                 //product already on sale, can't apply further discount
@@ -558,13 +562,12 @@ class VTWPR_Apply_Rules{
         break;
       case 'inCurrentInPopOnly':
           if ($vtwpr_rules_set[$i]->rule_deal_info[$d]['action_amt_type'] == 'zero' ) {  //means we are acting on the already-found 'buy' unit
-            $vtwpr_rules_set[$i]->actionPop_exploded_group_begin = $vtwpr_rules_set[$i]->inPop_exploded_group_end - 1;   //end - 1 gets the nth, as well as the direct hit...
-            $vtwpr_rules_set[$i]->actionPop_exploded_group_end   = $vtwpr_rules_set[$i]->inPop_exploded_group_end;        
+            $vtwpr_rules_set[$i]->actionPop_exploded_group_begin = $vtwpr_rules_set[$i]->inPop_exploded_group_end - 1;   //end - 1 gets the nth, as well as the direct hit...        
           } else {          
             //always the same as inPop pointers
             $vtwpr_rules_set[$i]->actionPop_exploded_group_begin = $vtwpr_rules_set[$i]->inPop_exploded_group_begin;
-            $vtwpr_rules_set[$i]->actionPop_exploded_group_end   = $vtwpr_rules_set[$i]->inPop_exploded_group_end;
-          }
+          } 
+          $vtwpr_rules_set[$i]->actionPop_exploded_group_end   = sizeof($vtwpr_rules_set[$i]->actionPop_exploded_found_list);    //v1.0.3   
         break;  
       case 'nextInInPop':   
           if ($vtwpr_rules_set[$i]->rule_deal_info[$d]['action_amt_type'] == 'zero' ) {  //means we are acting on the already-found 'buy' unit
@@ -626,6 +629,17 @@ class VTWPR_Apply_Rules{
       case ($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_amt_type']   == 'forThePriceOf_Currency') :
       case ($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_applies_to'] == 'cheapest') :    //can only be 'each'
       case ($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_applies_to'] == 'most_expensive') :   //can only be 'each'
+        
+        //v1.0.3 begin
+          //reset the action group pointers to be = to buy group pointers, so actionpop doesn't count whole group at once...  so whatever group count the buy group as set, we do here.
+          if ($vtwpr_rules_set[$i]->discountAppliesWhere == 'inCurrentInPopOnly') {  //'inCurrentInPopOnly' = 'discount this one'
+              $vtwpr_rules_set[$i]->actionPop_exploded_group_begin = $vtwpr_rules_set[$i]->inPop_exploded_group_begin; 
+              $vtwpr_rules_set[$i]->actionPop_exploded_group_end   = $vtwpr_rules_set[$i]->inPop_exploded_group_end;
+          }
+          $this->vtwpr_apply_discount_as_a_group($i, $d, $ar );       
+        break;
+        //v1.0.3 end  
+             
       case ( ($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_applies_to'] == 'all') && ($vtwpr_rules_set[$i]->rule_deal_info[$d]['discount_amt_type']   == 'currency') ): 
           $this->vtwpr_apply_discount_as_a_group($i, $d, $ar );       
         break;
@@ -638,10 +652,13 @@ class VTWPR_Apply_Rules{
         break;
     } 
 
-    if ( ($vtwpr_rules_set[$i]->actionPop_exploded_group_end >= sizeof($vtwpr_rules_set[$i]->actionPop_exploded_found_list) ) ||   
+    //v 1.0.3 begin
+    $sizeof_actionpop_list = sizeof($vtwpr_rules_set[$i]->actionPop_exploded_found_list); 
+    if ( ($vtwpr_rules_set[$i]->actionPop_exploded_group_end >= $sizeof_actionpop_list ) ||   
+         ($ar >= ($sizeof_actionpop_list) ) ||  //v1.0.3 exit if infinite repeat  
          ($vtwpr_rules_set[$i]->end_of_actionPop_reached == 'yes') ) {
        $vtwpr_rules_set[$i]->discount_processing_status = 'InPopEnd';
-
+    //v 1.0.3 end
     } else {
       switch ($vtwpr_rules_set[$i]->discountAppliesWhere)  {
         case 'allActionPop':
@@ -1412,7 +1429,8 @@ class VTWPR_Apply_Rules{
     */
     $templateKey = $vtwpr_rules_set[$i]->rule_template;    
       
-    $for_loop_current_prod_id;
+    $for_loop_current_prod_id = ''; //v1.0.3        
+
     $for_loop_unit_count = 0;
     $for_loop_price_total = 0;
     $for_loop_elapsed_count = 0;

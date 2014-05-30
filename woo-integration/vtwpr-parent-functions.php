@@ -70,14 +70,54 @@
               //DON'T USE THIS ANYMORE, BECOMES SELF-REFERENTIAL, AS GET_PRICE() NOW HOOKS THE SINGLE PRODUCT DISCOUNT ...
               //    $vtwpr_cart_item->unit_price     =  get_option( 'woocommerce_tax_display_cart' ) == 'excl' || $woocommerce->customer->is_vat_exempt() ? $_product->get_price_excluding_tax() : $_product->get_price();
 
-           
-                  $vtwpr_cart_item->unit_price =  $cart_item['line_subtotal'] / $cart_item['quantity'];
-                                   
-                  $vtwpr_cart_item->db_unit_price  =  $vtwpr_cart_item->unit_price; 
 
-                  //how does this work with tax exemption?????????????????
-                  $vtwpr_cart_item->db_unit_price_list     =  get_post_meta( $product_id, '_regular_price', true );
-                  $vtwpr_cart_item->db_unit_price_special  =  get_post_meta( $product_id, '_sale_price', true );               
+                  //v1.0.3 begin - redo for VAT processing...
+                  
+                  $regular_price = get_post_meta( $product_id, '_regular_price', true );
+                  if ($regular_price > 0) {
+                     $vtwpr_cart_item->db_unit_price_list  =  $regular_price;
+                  } else {
+                     $vtwpr_cart_item->db_unit_price_list  =  get_post_meta( $product_id, '_price', true );
+                  }
+    
+                  $vtwpr_cart_item->db_unit_price_special  =  get_post_meta( $product_id, '_sale_price', true );                  
+
+                  if (( get_option( 'woocommerce_prices_include_tax' ) == 'no' )  || 
+                      ( $woocommerce->customer->is_vat_exempt()) ) {
+                     //NO VAT included in price
+                     $vtwpr_cart_item->unit_price =  $cart_item['line_subtotal'] / $cart_item['quantity'];                                                           
+                  } else {
+                     //VAT included in price, and $cart_item pricing has already subtracted out the VAT, so use DB prices (otherwise if other functions called, recursive processing will ensue...)
+                     switch(true) {
+                        case ($vtwpr_cart_item->db_unit_price_special > 0) :  
+                            if ( ($vtwpr_cart_item->db_unit_price_list < 0) ||    //sometimes list price is blank, and user only sets a sale price!!!
+                                 ($vtwpr_cart_item->db_unit_price_special < $vtwpr_cart_item->db_unit_price_list) )  {
+                                //item is on sale, use sale price
+                               $vtwpr_cart_item->unit_price = $vtwpr_cart_item->db_unit_price_special;
+                            } else {
+                               //use regular price
+                               $vtwpr_cart_item->unit_price = $vtwpr_cart_item->db_unit_price_list;
+                            }
+                          break;
+                        default:
+                            $vtwpr_cart_item->unit_price = $vtwpr_cart_item->db_unit_price_list;                            
+                          break;
+                      }
+                     /*
+                     if ( ($vtwpr_cart_item->db_unit_price_special > 0) &&
+                          ($vtwpr_cart_item->db_unit_price_special < $vtwpr_cart_item->db_unit_price_list) ) {
+                       $vtwpr_cart_item->unit_price = $vtwpr_cart_item->db_unit_price_special;
+                     } else {
+                       $vtwpr_cart_item->unit_price = $vtwpr_cart_item->db_unit_price_list;
+                     }
+                     */
+                  }
+                  
+                  $vtwpr_cart_item->db_unit_price  =  $vtwpr_cart_item->unit_price;
+
+                  //v1.0.3 end                     
+  
+                                 
               }               
 
 
@@ -213,6 +253,7 @@
       $short_msg_array = array();
       $full_msg_array = array();
       $msg_already_done = 'no';
+      $show_yousave_one_some_msg;
     
       //auditTrail keyed to rule_id, so foreach is necessary
       foreach ($vtwpr_cart->cart_items[0]->cartAuditTrail as $key => $row) {       
@@ -259,14 +300,37 @@
       //needed for wp-e-commerce!!!!!!!!!!!
       //  if = 'yes', display of 'yousave' becomes 'save FROM' and doesn't change!!!!!!!
 //      $product_variations_sw = vtwpr_test_for_variations($product_id);
-    
+      $product_variations_sw;
+      
+      
       if ($vtwpr_cart->cart_items[0]->yousave_total_amt > 0) {
          $list_price                    =   $vtwpr_cart->cart_items[0]->db_unit_price_list;
          $db_unit_price_list_html_woo   =   woocommerce_price($list_price);
          $discount_price                =   $vtwpr_cart->cart_items[0]->discount_price;
          $discount_price_html_woo       =   woocommerce_price($discount_price);
-   //      $vtwpr_cart->cart_items[0]->product_discount_price_html_woo = 
-   //         '<del>' . $db_unit_price_list_html_woo . '</del><ins>' . $discount_price_html_woo . '</ins>'; 
+
+         //v1.0.3 begin
+         //from woocommerce/includes/abstracts/abstract-wp-product.php
+         // Check for Price Suffix
+         $price_display_suffix  = get_option( 'woocommerce_price_display_suffix' );
+      	 if ( ( $price_display_suffix ) &&                              //v1.0.3
+              ( $vtwpr_cart->cart_items[0]->discount_price > 0 ) ) {   //v1.0.3  don't do suffix for zero amount...
+            //first get rid of pricing functions which aren't relevant here
+             $find = array(    //these are allowed in suffix, remove
+      				'{price_including_tax}',
+      				'{price_excluding_tax}'
+      			);
+      			$replace = '';
+      			$price_display_suffix = str_replace( $find, $replace, $price_display_suffix );
+            
+            //then see if suffix is needed
+            if (strpos($discount_price_html_woo, $price_display_suffix) !== false) { //if suffix already in price, do nothing
+              $do_nothing;
+            } else {
+              $discount_price_html_woo = $discount_price_html_woo . ' <small class="woocommerce-price-suffix ">' . $price_display_suffix . '</small>';
+            }
+         }
+         //v1.0.3 end
       } else {
          $db_unit_price_list_html_woo;
          $discount_price_html_woo;
@@ -419,15 +483,15 @@
 			'post_status'	  => 'publish',
       'order'         => 'ASC'
 	  ));
+    //v1.0.3 begin
+   $product_variations_list = array(); //v1.0.3
    if ($variations)  {    
-      $product_variations_list = array();
       foreach ( $variations as $variation) {
         $product_variations_list [] = $variation;             
     	}
-    } else  {
-      $product_variations_list;
-    }
-    
+   }
+    //v1.0.3 end
+     
     return ($product_variations_list);
   } 
 
@@ -2220,6 +2284,34 @@
       
       return $amt;
   }
+
+
+  //***** v1.0.3 begin
+  /* ************************************************
+  **  if BCMATH not installed with PHP by host, this will replace it.
+  *************************************************** */
+  if (!function_exists('bcmul')) {
+    function bcmul($_ro, $_lo, $_scale=0) {
+      return round($_ro*$_lo, $_scale);
+    }
+  }
+  if (!function_exists('bcdiv')) {
+    function bcdiv($_ro, $_lo, $_scale=0) {
+      return round($_ro/$_lo, $_scale);
+    }
+  }
+  
+  function vtwpr_debug_options(){ 
+    global $vtwpr_setup_options;
+    if ( ( isset( $vtwpr_setup_options['debugging_mode_on'] )) &&
+         ( $vtwpr_setup_options['debugging_mode_on'] == 'yes' ) ) {  
+      error_reporting(E_ALL);  
+    }  else {
+      error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING ^ E_DEPRECATED ); 
+    } 
+  }
+  //***** v1.0.3 end
+
 
 
   /* ************************************************

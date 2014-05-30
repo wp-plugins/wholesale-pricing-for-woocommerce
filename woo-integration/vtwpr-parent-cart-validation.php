@@ -98,6 +98,9 @@ class VTWPR_Parent_Cart_Validation {
     // =====================++++++++++
     add_filter('woocommerce_get_price',                   array(&$this, 'vtwpr_maybe_get_price'), 10, 2);
     // =====================++++++++++
+  
+    //v1.0.3  needed if all prices are zero from Catalog rules, otherwise subtotal reflects list price!
+    add_action( 'woocommerce_before_mini_cart', array(&$this, 'vtprd_maybe_recalc_woo_totals'), 10, 1 );  
     
     //********************************************************************************************************************
 
@@ -323,7 +326,7 @@ class VTWPR_Parent_Cart_Validation {
   //the form validation filter executes ONLY at click-to-pay time, just to access the global variables!!!!!!!!! 
 	public function vtwpr_woo_validate_order(){
     global $vtwpr_rules_set, $vtwpr_cart, $vtwpr_setup_options, $vtwpr_info, $woocommerce;
-        
+    vtwpr_debug_options();  //v1.0.3     
     //Open Session Variable, get rules_set and cart if not there...
     $data_chain = $this->vtwpr_get_data_chain();
 
@@ -379,6 +382,7 @@ class VTWPR_Parent_Cart_Validation {
         $data_chain = array();
         $data_chain[] = $vtwpr_rules_set;
         $data_chain[] = $vtwpr_cart;
+        $data_chain[] = vtwpr_get_current_user_role();  //v1.0.3
         $data_chain[] =  $contents_total;
         $data_chain[] =  $applied_coupons;
         $_SESSION['data_chain'] = serialize($data_chain);              
@@ -403,7 +407,7 @@ class VTWPR_Parent_Cart_Validation {
 
  
     global $post, $vtwpr_cart, $vtwpr_cart_item, $vtwpr_info, $vtwpr_rules_set, $vtwpr_rule;
-
+    vtwpr_debug_options();  //v1.0.3 
    // **********************************
    /*   This is a Catalog-Only call
    // **********************************
@@ -441,7 +445,7 @@ class VTWPR_Parent_Cart_Validation {
     vtwpr_get_product_session_info($product_id, $price);
 
     //price is ALWAYS returned with NO formatting, as it is called during processing, not at display time
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0) {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       $price = $vtwpr_info['product_session_info']['product_discount_price'];
     } 
     
@@ -457,7 +461,7 @@ class VTWPR_Parent_Cart_Validation {
   *************************************************** */
 	public function vtwpr_get_product_catalog_price_new($price, $product_id = null){     //passed data from wpsc_price
     global $post, $vtwpr_info;
-
+    vtwpr_debug_options();  //v1.0.3 
  //echo '001a in catalog_price_new' .'<br>';
 //			 wp_die( __('<strong>DIED in vtwpr_get_product_catalog_price_new.</strong>', 'vtwpr'), __('VT Wholesale Pricing not compatible - WP', 'vtwpr'), array('back_link' => true));
   /* ************************************************
@@ -500,16 +504,8 @@ class VTWPR_Parent_Cart_Validation {
       vtwpr_recompute_discount_price($product_id_passed_into_function, $price);  
     }
 
-/*
-if ($product_id == '10') { 
-echo 'product_session_info= <pre>'.print_r($vtwpr_info['product_session_info'], true).'</pre>' ;  
-global $vtwpr_cart, $vtwpr_rules_set;
-echo '$vtwpr_cart = <pre>'.print_r($vtwpr_cart, true).'</pre>' ;
-echo '$vtwpr_rules_set = <pre>'.print_r($vtwpr_rules_set, true).'</pre>' ;
-wp_die( __('<strong>Looks like you\'re running an older version of WordPress, you need to be running at least WordPress 3.3 to use the Varktech Wholesale Pricing plugin.</strong>', 'vtwpr'), __('VT Wholesale Pricing not compatible - WP', 'vtwpr'), array('back_link' => true));
-}
-*/ 
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0) {
+
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       $price = $vtwpr_info['product_session_info']['product_discount_price'];
     }     
     
@@ -521,7 +517,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
 
 	public function vtwpr_maybe_grouped_price_html($price_html, $product_info){   
     global $post, $vtwpr_info, $vtwpr_setup_options; 
-    
+    vtwpr_debug_options();  //v1.0.3 
     //in place of is_admin, which doesn't work in AJAX...
      if ( function_exists( 'get_current_screen' ) ) {  // get_current_screen ONLY exists in ADMIN!!!   
        if ($post->post_type == 'product'  ) {    //in admin, don't run this on the PRODUCT screen!!
@@ -599,8 +595,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
     }
  */
 
-
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0)  {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       if ($vtwpr_setup_options['show_catalog_price_crossout'] == 'yes')  {
         $price_html = '<del>' . $vtwpr_info['product_session_info']['product_list_price_html_woo']  . '</del><ins>' .$from. ' ' . $vtwpr_info['product_session_info']['product_discount_price_html_woo'] . '</ins>'; 
       } else {
@@ -616,7 +611,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
 
 	public function vtwpr_maybe_variable_sale_price_html($price_html, $product_info){    
     global $post, $vtwpr_info, $vtwpr_setup_options;
-
+    vtwpr_debug_options();  //v1.0.3 
     //in place of is_admin, which doesn't work in AJAX...
      if ( function_exists( 'get_current_screen' ) ) {  // get_current_screen ONLY exists in ADMIN!!!   
        if ($post->post_type == 'product'  ) {    //in admin, don't run this on the PRODUCT screen!!
@@ -694,8 +689,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
       vtwpr_recompute_discount_price($product_id_passed_into_function, $price);  
     }
  */
-
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0)  {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       if ($vtwpr_setup_options['show_catalog_price_crossout'] == 'yes')  {
         $price_html = '<del>' . $vtwpr_info['product_session_info']['product_list_price_html_woo']  . '</del><ins>' .$from.  ' ' . $vtwpr_info['product_session_info']['product_discount_price_html_woo'] . '</ins>'; 
       } else {
@@ -712,7 +706,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
   */
 	public function vtwpr_maybe_catalog_price_html($price_html, $product_info){    
     global $post, $vtwpr_info, $vtwpr_setup_options;
-
+    vtwpr_debug_options();  //v1.0.3 
     //in place of is_admin, which doesn't work in AJAX...
      if ( function_exists( 'get_current_screen' ) ) {  // get_current_screen ONLY exists in ADMIN!!!   
        if ($post->post_type == 'product'  ) {    //in admin, don't run this on the PRODUCT screen!!
@@ -760,7 +754,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
  
     $from = strstr($price_html, 'From') !== false ? ' From ' : ' '; 
 
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0)  {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       if ($vtwpr_setup_options['show_catalog_price_crossout'] == 'yes')  {     
         $price_html = '<del>' . $vtwpr_info['product_session_info']['product_list_price_html_woo']  . '</del><ins>' .$from.  ' ' . $vtwpr_info['product_session_info']['product_discount_price_html_woo'] . '</ins>'; 
       } else {
@@ -777,6 +771,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
 	public function vtwpr_maybe_cart_item_price_html($price_html, $cart_item, $cart_item_key){    
 //return 444; //mwnprice
     global $post, $vtwpr_info, $vtwpr_setup_options;
+    vtwpr_debug_options();  //v1.0.3 
   /* 
      session_start();    //mwntest
     echo 'SESSION data <pre>'.print_r($_SESSION, true).'</pre>' ; 
@@ -806,7 +801,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
     vtwpr_maybe_get_price_single_product($product_id, $price);
 
 
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0)  {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       if ($vtwpr_setup_options['show_catalog_price_crossout'] == 'yes') {
         $price_html = '<del>' . $vtwpr_info['product_session_info']['product_list_price_html_woo']  . '</del><ins>' . $vtwpr_info['product_session_info']['product_discount_price_html_woo'] . '</ins>'; 
     } else {
@@ -822,7 +817,8 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
   //FROM 'woocommerce_get_price' => Central behind the scenes pricing
   //*************************************************************************
 	public function vtwpr_maybe_get_price($price, $product_info){    
-    global $post, $vtwpr_info;		
+    global $post, $vtwpr_info;
+    vtwpr_debug_options();  //v1.0.3 		
  //echo '<br>GET PRICE BEGIN<br>';
 //          session_start();    //mwntest
  //echo 'SESSION data <pre>'.print_r($_SESSION, true).'</pre>' ;
@@ -858,7 +854,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
     //vtwpr_maybe_get_discount_catalog_session_price($product_id);
     vtwpr_maybe_get_price_single_product($product_id, $price);
 
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0) {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       $price = $vtwpr_info['product_session_info']['product_discount_price'];
     } 
 
@@ -883,6 +879,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
  
 	public function vtwpr_get_product_catalog_price_do_convert($price, $product_id = null, $variation = null){   
     global $post, $vtwpr_info;
+    vtwpr_debug_options();  //v1.0.3 
 //mwntest
  //echo '001a in price_do_convert' .'<br>';
     $product_id_passed_into_function = $product_id;
@@ -906,13 +903,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
       vtwpr_recompute_discount_price($product_id_passed_into_function, $price);  
     }
 
-if ($product_id == '10') { 
-//mwntest
- //echo 'product_session_info= <pre>'.print_r($vtwpr_info['product_session_info'], true).'</pre>' ; 
-//wp_die( __('<strong>Looks like you\'re running an older version of WordPress, you need to be running at least WordPress 3.3 to use the Varktech Wholesale Pricing plugin.</strong>', 'vtwpr'), __('VT Wholesale Pricing not compatible - WP', 'vtwpr'), array('back_link' => true));
-}
-   
-    if ($vtwpr_info['product_session_info']['product_discount_price'] > 0) {
+    if ($vtwpr_info['product_session_info']['product_yousave_total_amt'] > 0)  {     //v1.0.3  replaced 'product_discount_price' with 'product_yousave_total_amt' to pick up a FREE discount
       return $vtwpr_info['product_session_info']['product_discount_price'];
     } else {     
       return $price;
@@ -1076,6 +1067,7 @@ public function vtwpr_get_product_catalog_price_add_to_cart( $product_id, $param
       $data_chain = array();
       $data_chain[] = $vtwpr_rules_set;
       $data_chain[] = $vtwpr_cart;
+      $data_chain[] = vtwpr_get_current_user_role();  //v1.0.3
       $data_chain[] =  $woocommerce->cart->cart_contents_total;
       $data_chain[] =  $woocommerce->cart->applied_coupons;
       $_SESSION['data_chain'] = serialize($data_chain);             
@@ -1110,10 +1102,11 @@ public function vtwpr_get_product_catalog_price_add_to_cart( $product_id, $param
  //echo '<br>AT BEginning: FROM parent-cart-validation  function cart-updated<br>' ;             
     //Open Session Variable, get rules_set and cart if not there....
     $data_chain = $this->vtwpr_get_data_chain();
-    
-    $woo_cart_contents_total_previous  = $data_chain[2]; //USED HERE
-    $woo_applied_coupons_previous      = $data_chain[3]; //USED HERE 
-    
+
+    $previous_user_role                = $data_chain[2]; //v1.0.3  added
+    $woo_cart_contents_total_previous  = $data_chain[3]; //v1.0.3  changed occurrence numbers
+    $woo_applied_coupons_previous      = $data_chain[4]; //v1.0.3  changed occurrence numbers 
+  
     //**********
     //prevents recursive processing during auto add execution of add_to_cart! 
     //**********
@@ -1143,8 +1136,12 @@ echo '$woocommerce->cart->applied_coupons= <pre>'.print_r($woocommerce->cart->ap
     //IF nothing changed from last time, no need to process the discount => 
     //'woocommerce_cart_updated' RUNS EVERY TIME THE CART OR CHECKOUT PAGE DISPLAYS!!!!!!!!!!!!!
     //-*******************************************************
-    if ( ($woocommerce->cart->cart_contents_total  ==  $woo_cart_contents_total_previous) &&
-         ($woocommerce->cart->applied_coupons      ==  $woo_applied_coupons_previous) ) {
+
+    if ( ($woocommerce->cart->cart_contents_total  > 0) &&   //V1.0.3  if == 0, lost addressability to woo, rerun
+         ($woocommerce->cart->cart_contents_total  ==  $woo_cart_contents_total_previous) &&
+         ($woocommerce->cart->applied_coupons      ==  $woo_applied_coupons_previous)  && 
+         ($previous_user_role                      ==  vtwpr_get_current_user_role() ) )  { //v1.0.3  only return if user_role has not changed
+          
  //echo '<br>Return 002<br>' ;          
        return;  
     }
@@ -1236,6 +1233,7 @@ wp_die( __('<strong>Looks like you\'re running an older version of WordPress, yo
     $data_chain = array();
     $data_chain[] = $vtwpr_rules_set;
     $data_chain[] = $vtwpr_cart;
+    $data_chain[] = vtwpr_get_current_user_role();  //v1.0.3
     $data_chain[] =  $contents_total;
     $data_chain[] =  $applied_coupons;
     $_SESSION['data_chain'] = serialize($data_chain);             
@@ -1429,6 +1427,7 @@ echo '$vtwpr_rules_set= <pre>'.print_r($vtwpr_rules_set, true).'</pre>' ;
     $data_chain = array();
     $data_chain[] = $vtwpr_rules_set;
     $data_chain[] = $vtwpr_cart;
+    $data_chain[] = vtwpr_get_current_user_role();  //v1.0.3
     $data_chain[] =  $woocommerce->cart->cart_contents_total;
     $data_chain[] =  $woocommerce->cart->applied_coupons;
     $_SESSION['data_chain'] = serialize($data_chain);  
@@ -1922,7 +1921,7 @@ echo '$order_info= <pre>'.print_r($order_info, true).'</pre>' ;
        access global     - in vtwpr_post_purchase_maybe_save_log_info    
       *************************************************   */
       global $vtwpr_rules_set, $vtwpr_cart;
-      
+  /*    
        $data_chain = array();
           
       if ($vtwpr_rules_set == '') {
@@ -1930,7 +1929,22 @@ echo '$order_info= <pre>'.print_r($order_info, true).'</pre>' ;
         $vtwpr_rules_set = $data_chain[0];
         $vtwpr_cart      = $data_chain[1];
       }
+   */
+      
 
+      //mwn0402
+      if (isset($_SESSION['data_chain'])) {
+        $data_chain      = unserialize($_SESSION['data_chain']);
+      } else {
+        $data_chain = array();
+      }
+      
+          
+      if ($vtwpr_rules_set == '') {        
+        $vtwpr_rules_set = $data_chain[0];
+        $vtwpr_cart      = $data_chain[1];
+      }
+    
       return $data_chain;
    }
 
@@ -1992,7 +2006,16 @@ echo '$order_info= <pre>'.print_r($order_info, true).'</pre>' ;
        
     return;    
   }
-
+   
+   //v1.0.3 begin New function, to pick up a zero discount total...
+   //  really only needed if ALL products have a catalog discount which ends up with ALL products FREE ...
+   public function vtwpr_maybe_recalc_woo_totals() {
+     global $woocommerce;
+     $woocommerce->cart->calculate_totals();        
+     return;
+   }
+   //v1.0.3 end
+   
  /*
     also:  in wpsc-includes/purchase-log-class.php  (from 3.9)
 		do_action( 'wpsc_sales_log_process_bulk_action', $current_action );

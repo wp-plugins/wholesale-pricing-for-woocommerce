@@ -754,8 +754,13 @@ action amt condition can be an amt or $$
   
   
   public function vtwpr_update_rules_info() {
-    global $post, $vtwpr_rule, $vtwpr_rules_set; 
+    global $post, $vtwpr_rule, $vtwpr_rules_set, $vtwpr_setup_options; 
 
+    //v1.0.4
+    if ( $vtwpr_setup_options['debugging_mode_on'] == 'yes' ){   
+      error_log( print_r(  '$vtwpr_rule', true ) );
+      error_log( var_export($vtwpr_rule, true ) );   
+    }
 /*      
     //set the switch used on the screen for JS data check
     switch( true ) {

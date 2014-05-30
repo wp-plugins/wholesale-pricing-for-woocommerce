@@ -14,14 +14,19 @@ DITTO ie10!!
 
                         jQuery(document).ready(function($) {                                                        
 
-
+                          //v1.0.3 changed to 2 buttons
                           //Include/Exclude Redirect , inserted into the PUBLISH box
                           newHtml  =  '<span class="box-border-line2" id="">&nbsp;</span>'            
-                          newHtml +=  '<div id="vtwpr-redirect">';
-                          newHtml +=  '<a href="http://www.varktech.com/documentation/wholesale-pricing/introrule"  target="_blank" id="vtwpr-redirect-anchor">';
-                          newHtml +=  $("#vtwpr-docTitle").val();        //pick up the literals passed up in the html...  "Documentation"
-                          newHtml +=  '</a></div>'; 
-                          $(newHtml).insertAfter('div#publishing-action');                                     	                        						
+                          newHtml +=  '<div class="vtwpr-redirect">';
+                          newHtml +=  '<a href="http://www.varktech.com/documentation/wholesale-pricing/introrule"  target="_blank" class="vtwpr-redirect-anchor">';
+                          newHtml +=  $("#vtwpr-moreInfo").val();        //pick up the literals passed up in the html...  
+                          newHtml +=  '</a></div>';           
+                          newHtml +=  '<div class="vtwpr-redirect vtwpr-redirect2">';
+                          newHtml +=  '<a href="http://www.varktech.com/support/"  target="_blank" class="vtwpr-redirect-anchor">';
+                          newHtml +=  $("#vtwpr-docTitle").val();        //pick up the literals passed up in the html...  
+                          newHtml +=  '</a></div>';                            
+                          $(newHtml).insertAfter('div#publishing-action');                               
+                                                               	                        						
 
                                                                                                                 
             //*************************************
@@ -212,9 +217,9 @@ DITTO ie10!!
                                 $('#minimum-purchase-Choose').attr('selected', true); 
                              }; 
                               */
-                                  reload_PricingType_Titles_catalog();
-                                  reload_BuyGroupFilterSelect_Titles_catalog();
-                                  reload_buy_amt_type_Titles_catalog();
+                                 // reload_PricingType_Titles_catalog();     v1.0.3
+                                 // reload_BuyGroupFilterSelect_Titles_catalog();  v1.0.3
+                                 // reload_buy_amt_type_Titles_catalog();    v1.0.3
                               //    reload_buy_repeat_condition_Titles_catalog();                                   
                                  
                                   if ($("#upperSelectsFirstTime").val() == 'yes') {
@@ -843,7 +848,9 @@ DITTO ie10!!
                               switch( $("#rule_template_framework").val() ) {
                                 case "0":                       noTemplateChoiceYet();              break;
                                 case "D-storeWideSale":         storeWideSale();                    break;
-                                case "D-simpleDiscount":        simpleMembershipDiscount();         break;
+                                case "D-simpleDiscount":        simpleMembershipDiscount();
+                                                                disableAllDiscountLimits();   //v1.0.43  moved here to prevent interference with cart simple discount usage...          
+                                                                                                    break;                          
                                 case "C-storeWideSale":         process_C_storeWideSale();          break;
                                 case "C-simpleDiscount":        process_C_simpleDiscount();         break;
                                 case "C-discount-inCart":       process_C_discount_inCart();        break;
@@ -895,7 +902,7 @@ DITTO ie10!!
                             };
                             function simpleMembershipDiscount() {    //Membership Discount   -Display
                               setDropdownsToInitalDefaults();
-                              disableAllDiscountLimits();
+                              //  disableAllDiscountLimits();   //v1.0.3  moved to a different location, interfered with cart simple discount usage...  
                               actionAmtType_change_text_to_remove_Next();
                               discountAmtType_protect1();
                               setSameAsBuyGroupOnly();                                                            
@@ -1702,7 +1709,7 @@ DITTO ie10!!
                               if ($("#upperSelectsHaveDataFirstTime").val() == 0 ) {
                                 $("#cumulativeRulePricing").val('yes');
                                 $("#cumulativeCouponPricing").val('yes');
-                                $("#cumulativeSalePricing").val('no');
+                                $("#cumulativeSalePricing").val('addToSalePrice');  //v1.0.3
                                 $("#ruleApplicationPriority_num").val('10');
                               }
 

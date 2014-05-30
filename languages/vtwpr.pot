@@ -1,0 +1,3060 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wholesale Pricing for Woo\n"
+"POT-Creation-Date: 2014-05-19 23:05+1200\n"
+"PO-Revision-Date: 2014-05-19 23:05+1200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;e_\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../vt-wholesale-pricing.php:465
+msgid ""
+"Looks like you're running an older version of WordPress, you need to be "
+"running at least WordPress 3.3 to use the Varktech Wholesale Pricing plugin."
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:466
+msgid "Current Wordpress Version = "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:474
+msgid ""
+"Looks like you're running an older version of PHP.   - your PHP version = "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:475
+msgid ""
+"You need to be running **at least PHP version 5** to use this plugin. Please "
+"contact your host and request an upgrade to PHP 5+ .  Once that has been "
+"installed, you can activate this plugin."
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:487
+msgid ""
+"Looks like you're running an older version of WooCommerce. You need to be "
+"running at least ** WooCommerce 2.0 **, to use the Varktech Wholesale "
+"Pricing plugin"
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:488
+msgid "Your current WooCommerce version = "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:495
+msgid ""
+"Varktech Wholesale Pricing for WooCommerce requires that WooCommerce be "
+"installed and activated. "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:496
+msgid "It looks like WooCommerce is either not installed, or not activated. "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:507
+msgid "Looks like you're running an older version of Wholesale Pricing Pro."
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:507
+msgid "Your Pro Version = "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:507
+msgid " and the minimum required pro version = "
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:508
+msgid ""
+"Please delete the old Wholesale Pricing Pro plugin from your installation "
+"via ftp, go to http://www.varktech.com/download-pro-plugins/ , download and "
+"install the newest Wholesale Pricing Pro version."
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:516
+msgid ""
+"In order for the Wholesale Pricing plugin to function successfully, the Woo "
+"Coupons Setting must be on, and it is currently off."
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:517
+msgid ""
+"Please go to the Woocommerce/Settings page.  Under the \"General\" tab, "
+"check the box next to \"Enable the use of coupons\" and click on the \"Save "
+"Changes\" button."
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:545
+msgid "Settings"
+msgstr ""
+
+#: ../vt-wholesale-pricing.php:546
+msgid "Docs"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:34
+msgid "Cart or Catalog "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:34
+msgid "Discount "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:50
+msgid " - Cart or Catalog Discount?"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:56
+msgid "CART Purchase Discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:62
+msgid "CATALOG Price Reduction"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:70
+msgid "Deal Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:84
+msgid "- Deal Type ? - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:92
+msgid "Discount by Category, Logged-in Role, Product ... "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:102
+#: ../admin/vtwpr-rules-ui-framework.php:104
+msgid "Discount Whole Store"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:112
+msgid "Deal Action"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:133
+msgid " - Discount Next Item / This Item ?  - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:140
+msgid "Buy something, discount the *next* item"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:147
+msgid "Buy something, discount the item"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:150
+msgid "Apply Discount to Catalog Item"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:170
+msgid "Buy Filter"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:173
+#: ../admin/vtwpr-rules-ui-framework.php:176
+msgid "Discount Group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:179
+msgid "Buy a Laptop"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:182
+msgid "Buy 5 apples"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:185
+#: ../admin/vtwpr-rules-ui-framework.php:188
+msgid "Buy 5 items"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:203
+msgid " - Choose a  Product Filter Filter -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:204
+msgid " - Choose a Discount Group Filter -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:205
+msgid " - Choose a Catalog Discount Group Filter -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:211
+msgid "Buy Any Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:212
+msgid "Discount Each Item"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:213
+msgid "Any Catalog Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:219
+#: ../admin/vtwpr-rules-ui-framework.php:220
+msgid "By Category / Logged-in Role ... (pro only) ...  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:221
+#: ../admin/vtwpr-rules-ui-framework.php:222
+#: ../admin/vtwpr-rules-ui-framework.php:557
+#: ../admin/vtwpr-rules-ui-framework.php:558
+msgid "By Category / Logged-in Role / Plugin Category"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:228
+#: ../admin/vtwpr-rules-ui-framework.php:229
+msgid "By Single Product with Variations  ... (pro only) ... "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:230
+#: ../admin/vtwpr-rules-ui-framework.php:231
+msgid "By Single Product with Variations"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:237
+#: ../admin/vtwpr-rules-ui-framework.php:238
+msgid "By Single Product ... (pro only) ... "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:239
+#: ../admin/vtwpr-rules-ui-framework.php:240
+msgid "By Single Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:250
+msgid "Get Filter"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:253
+#: ../admin/vtwpr-rules-ui-framework.php:256
+msgid "Inactive"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:259
+msgid "Get a Mouse (Free)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:262
+msgid "Get them for a Group Price"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:265
+msgid "Get the Cheapest at a Discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:268
+msgid "Get the 6th one at a Discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:283
+msgid " - Choose a Get Group Filter - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:284
+msgid " - Choose a Discount Group Filter - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:291
+msgid "Discount Group Same as  Product Filter"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:297
+msgid "Discount Any Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:303
+msgid "By Category / Plugin Category  ... (pro only) ...  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:304
+#: ../admin/vtwpr-rules-ui-framework.php:730
+msgid "By Category / Plugin Category"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:310
+msgid "By Single Product with Variations  ... (pro only) ...  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:311
+#: ../admin/vtwpr-rules-ui-framework.php:567
+#: ../admin/vtwpr-rules-ui-framework.php:737
+msgid "By Single Product with Variations "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:317
+msgid "By Single Product  ... (pro only) ...  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:318
+#: ../admin/vtwpr-rules-ui-framework.php:575
+#: ../admin/vtwpr-rules-ui-framework.php:576
+#: ../admin/vtwpr-rules-ui-framework.php:744
+msgid "By Single Product "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:329
+msgid "Basic Rule"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:337
+msgid "Advanced Rule"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:355
+msgid "Rule is ON"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:361
+msgid "Rule is ON Always"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:367
+msgid "Rule is OFF"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:386
+msgid "Wizard is On"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:392
+msgid "Wizard is Off"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:450
+#: ../admin/vtwpr-rules-ui-framework.php:505
+msgid "No "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:456
+#: ../admin/vtwpr-rules-ui-framework.php:511
+msgid "Yes "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:474
+msgid " No - if product already on Sale, no further discount  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:480
+msgid "Apply Discount to Product Sale Price  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:486
+msgid "Apply Discount to Regular Price, if Less than Sale Price  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:522
+msgid ""
+"Rule Application Priority, used if multiple rules process together (lower "
+"number processed first) "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:542
+#: ../admin/vtwpr-rules-ui-framework.php:710
+msgid "- Group Filter Type -  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:548
+msgid "Any Product  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:549
+msgid "Any Catalog Product  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:555
+#: ../admin/vtwpr-rules-ui-framework.php:556
+msgid "By Category / Logged-in Role / Plugin Category ... (pro only) ..."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:564
+#: ../admin/vtwpr-rules-ui-framework.php:565
+#: ../admin/vtwpr-rules-ui-framework.php:736
+msgid "By Single Product with Variations ... (pro only) ..."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:566
+msgid "By Single Product with Variations  "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:573
+#: ../admin/vtwpr-rules-ui-framework.php:574
+#: ../admin/vtwpr-rules-ui-framework.php:743
+msgid "By Single Product ... (pro only) ..."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:603
+#: ../admin/vtwpr-rules-ui-framework.php:772
+msgid " And"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:611
+#: ../admin/vtwpr-rules-ui-framework.php:780
+msgid " Or"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:631
+msgid " - Applies to the Buy Population... - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:632
+msgid " - Applies to the Discount Population... - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:638
+msgid "Applies to all Buy Products as a group "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:639
+msgid "Applies to all Discount Products as a group "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:645
+msgid "Applies to each individual Buy Product "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:646
+msgid "Applies to each individual Discount Product "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:652
+msgid "Applies to each individual Buy Product, limited by a count "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:653
+msgid "Applies to each individual Discount Product, limited by a count "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:671
+msgid "Apply to Quantity Total "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:679
+msgid "Apply to Price "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:716
+msgid "Discount Group Same as  Product Filter "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:723
+msgid "Any Product "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:729
+msgid "By Category / Plugin Category ... (pro only) ..."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:800
+msgid "Applies to the Buy Population as a group "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:806
+msgid "Applies to each member of the Buy Population "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:812
+msgid "Applies to some members of the Buy Population, limited by a count "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:830
+msgid " Apply to Quantity Total"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:838
+msgid " Apply to Price"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:873
+#: ../admin/vtwpr-rules-ui-framework.php:885
+msgid "Allow product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:873
+msgid "In Rules as normal"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:879
+#: ../admin/vtwpr-rules-ui-framework.php:891
+msgid "Exclude product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:879
+msgid "From All Rules Forever"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:885
+msgid "In the Checked Rules below"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:891
+msgid "From the Checked Rules below"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:928
+msgid "- Please Choose a Wholesale Pricing Template Type -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:934
+msgid "Immediate Price Reduction - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:934
+msgid "Catalog Display Pricing"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:940
+#: ../admin/vtwpr-rules-ui-framework.php:978
+msgid "Store-Wide Sale with a Percentage or $ Value Off"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:940
+msgid "applied when PRODUCT DISPLAYS"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:940
+#: ../admin/vtwpr-rules-ui-framework.php:960
+msgid "- Realtime -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:958
+#: ../admin/vtwpr-rules-ui-framework.php:996
+msgid "Simple Discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:959
+#: ../admin/vtwpr-rules-ui-framework.php:997
+msgid ""
+"(by Membership / Wholesale  / Product Category / Wholesale Pricing "
+"Category / Product / Variation)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:972
+msgid "Simple Deals for add to Cart Pricing"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:978
+#: ../admin/vtwpr-rules-ui-framework.php:998
+msgid "- Cart -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1004
+msgid "Discount for purchases *already in Cart*"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1010
+msgid "Buy 5/$500, Get a discount for Some/All of Those 5"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1012
+#: ../admin/vtwpr-rules-ui-framework.php:1040
+msgid "*BOGO*"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1018
+msgid "Buy 5, Get them for the price of 4/$400"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1020
+#: ../admin/vtwpr-rules-ui-framework.php:1048
+msgid "*PACKAGE PRICING*"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1026
+msgid "Buy 5/$500, Get the cheapest/most expensive of those at a discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1032
+msgid "Discount for *Next* Purchases added to Cart"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1038
+msgid "Buy 6/$600, Get a discount on Next 4/$400 added to Cart"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1046
+msgid "Buy 6/$600, Get Next 3 for the price of 2/$200"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1054
+msgid ""
+"Buy 6/$600, Get a discount on the cheapest/most expensive in Next 5/$500 "
+"added to Cart"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1060
+msgid "Buy 6/$600, Get the Next Nth added to Cart at a discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1108
+#: ../admin/vtwpr-rules-ui-framework.php:1269
+#: ../admin/vtwpr-rules-ui-framework.php:2927
+#: ../admin/vtwpr-rules-ui-framework.php:3081
+msgid ""
+"\"Buy group amount\" - only \"No buy condition\" is allowed for this setup "
+"type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1113
+#: ../admin/vtwpr-rules-ui-framework.php:1274
+#: ../admin/vtwpr-rules-ui-framework.php:2932
+#: ../admin/vtwpr-rules-ui-framework.php:3086
+msgid "\"Buy pool amount\" - no values allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1128
+#: ../admin/vtwpr-rules-ui-framework.php:1284
+#: ../admin/vtwpr-rules-ui-framework.php:2947
+#: ../admin/vtwpr-rules-ui-framework.php:3096
+msgid ""
+"\"Buy group min / max\" - only \"No Discount Group Amount Min / Max \" is "
+"allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1133
+#: ../admin/vtwpr-rules-ui-framework.php:1289
+#: ../admin/vtwpr-rules-ui-framework.php:2952
+#: ../admin/vtwpr-rules-ui-framework.php:3101
+msgid "\"Buy group min / max amount\" - no values allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1138
+msgid ""
+"\"Get group repeat\" - only \" No Repeats  (Apply Discount to Discount Group "
+"ONCE)\" is allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1143
+#: ../admin/vtwpr-rules-ui-framework.php:1299
+#: ../admin/vtwpr-rules-ui-framework.php:2962
+#: ../admin/vtwpr-rules-ui-framework.php:3111
+msgid "\"Get repeat amount\" - no values allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1148
+#: ../admin/vtwpr-rules-ui-framework.php:1304
+#: ../admin/vtwpr-rules-ui-framework.php:2967
+#: ../admin/vtwpr-rules-ui-framework.php:3116
+msgid ""
+"\"Get group amount\" - only \"Discount Each Unit\" is allowed for this setup "
+"type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1153
+#: ../admin/vtwpr-rules-ui-framework.php:1309
+#: ../admin/vtwpr-rules-ui-framework.php:2972
+#: ../admin/vtwpr-rules-ui-framework.php:3121
+msgid "\"Get pool amount\" - no values allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1158
+#: ../admin/vtwpr-rules-ui-framework.php:1314
+#: ../admin/vtwpr-rules-ui-framework.php:2977
+#: ../admin/vtwpr-rules-ui-framework.php:3126
+msgid ""
+"\"Get pool amount applies to\" - only \"All action pool products\" is "
+"allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1163
+#: ../admin/vtwpr-rules-ui-framework.php:1319
+#: ../admin/vtwpr-rules-ui-framework.php:2982
+#: ../admin/vtwpr-rules-ui-framework.php:3131
+msgid ""
+"\"Get group min/mx - only \"No Discount Group Amount Min / Max \" is allowed "
+"for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1168
+#: ../admin/vtwpr-rules-ui-framework.php:1324
+#: ../admin/vtwpr-rules-ui-framework.php:2987
+#: ../admin/vtwpr-rules-ui-framework.php:3136
+msgid "\"Get pool amount amount\" - no values allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1173
+#: ../admin/vtwpr-rules-ui-framework.php:1329
+#: ../admin/vtwpr-rules-ui-framework.php:1478
+#: ../admin/vtwpr-rules-ui-framework.php:1909
+#: ../admin/vtwpr-rules-ui-framework.php:2124
+#: ../admin/vtwpr-rules-ui-framework.php:2554
+#: ../admin/vtwpr-rules-ui-framework.php:2769
+#: ../admin/vtwpr-rules-ui-framework.php:2992
+#: ../admin/vtwpr-rules-ui-framework.php:3141
+msgid ""
+"\"Discount Type \" - \"For the price of\" is not allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1181
+#: ../admin/vtwpr-rules-ui-framework.php:1486
+#: ../admin/vtwpr-rules-ui-framework.php:1917
+#: ../admin/vtwpr-rules-ui-framework.php:2132
+#: ../admin/vtwpr-rules-ui-framework.php:2562
+#: ../admin/vtwpr-rules-ui-framework.php:2777
+#: ../admin/vtwpr-rules-ui-framework.php:3000
+#: ../admin/vtwpr-rules-ui-framework.php:3149
+msgid ""
+"When \"Discount Type\" is \"Fixed Price\" or \"Free\", \"Discount Applies To"
+"\" must be \"Each\", \"Cheapest\" or \"Most Expensive\" "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1193
+#: ../admin/vtwpr-rules-ui-framework.php:1349
+#: ../admin/vtwpr-rules-ui-framework.php:3012
+#: ../admin/vtwpr-rules-ui-framework.php:3161
+msgid ""
+"\"Automatically Add Free Product to Cart\" not allowed for this deal type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1203
+#: ../admin/vtwpr-rules-ui-framework.php:1359
+msgid ""
+"\"Discount applies to\" - \"each product\" or \"all products\" only allowed "
+"for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1279
+#: ../admin/vtwpr-rules-ui-framework.php:3091
+msgid ""
+"\"Buy pool amount applies to\" - only \"Each buy pool product\" is allowed "
+"for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1294
+#: ../admin/vtwpr-rules-ui-framework.php:2957
+#: ../admin/vtwpr-rules-ui-framework.php:3106
+msgid ""
+"\"Get repeat condition\" - only \"Apply the Get Pool Once (No Repeats)\" is "
+"allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1337
+msgid ""
+"When \"Discount Type\" is \"Fixed Price\" or \"Free\", \"Discount Applies To"
+"\" must be \"Each\", \"Cheapest\" or \"Most Expensiv\" "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1418
+msgid "Please choose a valid Group Amount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1514
+#: ../admin/vtwpr-rules-ui-framework.php:1730
+#: ../admin/vtwpr-rules-ui-framework.php:1945
+#: ../admin/vtwpr-rules-ui-framework.php:2160
+#: ../admin/vtwpr-rules-ui-framework.php:2375
+#: ../admin/vtwpr-rules-ui-framework.php:2590
+#: ../admin/vtwpr-rules-ui-framework.php:2805
+msgid ""
+"\"Get (Discount) Group Filter\" must be either a single product, or a single "
+"product variation, When \"Automatically Add Free Product to Cart\" is "
+"Selected."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1514
+#: ../admin/vtwpr-rules-ui-framework.php:1730
+#: ../admin/vtwpr-rules-ui-framework.php:1945
+#: ../admin/vtwpr-rules-ui-framework.php:2160
+#: ../admin/vtwpr-rules-ui-framework.php:2375
+#: ../admin/vtwpr-rules-ui-framework.php:2590
+#: ../admin/vtwpr-rules-ui-framework.php:2805
+msgid ""
+"Choose either \"Discount a Single Product Only\", or \"Discount a Single "
+"Product with Variations\" and select a *Single* Variation. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1514
+#: ../admin/vtwpr-rules-ui-framework.php:1730
+#: ../admin/vtwpr-rules-ui-framework.php:1945
+#: ../admin/vtwpr-rules-ui-framework.php:2160
+#: ../admin/vtwpr-rules-ui-framework.php:2375
+#: ../admin/vtwpr-rules-ui-framework.php:2590
+#: ../admin/vtwpr-rules-ui-framework.php:2805
+msgid "Otherwise the Auto add does not know which product to add. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1522
+#: ../admin/vtwpr-rules-ui-framework.php:1738
+#: ../admin/vtwpr-rules-ui-framework.php:1953
+#: ../admin/vtwpr-rules-ui-framework.php:2168
+#: ../admin/vtwpr-rules-ui-framework.php:2383
+#: ../admin/vtwpr-rules-ui-framework.php:2598
+#: ../admin/vtwpr-rules-ui-framework.php:2813
+msgid ""
+"\"Get (Discount) Group Amount\" may not be: \"Discount $$ Value\" or \"Nth "
+"Quantity\" , When \"Automatically Add Free Product to Cart\" is Selected"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1530
+#: ../admin/vtwpr-rules-ui-framework.php:1746
+#: ../admin/vtwpr-rules-ui-framework.php:1961
+#: ../admin/vtwpr-rules-ui-framework.php:2176
+#: ../admin/vtwpr-rules-ui-framework.php:2391
+#: ../admin/vtwpr-rules-ui-framework.php:2606
+#: ../admin/vtwpr-rules-ui-framework.php:2821
+msgid ""
+"\"Discount Maximum for Rule\" may only be: \"No Discount Rule Max\" or "
+"\"Maximum Number of Times\" , When \"Automatically Add Free Product to Cart"
+"\" is Selected"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1538
+#: ../admin/vtwpr-rules-ui-framework.php:1754
+#: ../admin/vtwpr-rules-ui-framework.php:1969
+#: ../admin/vtwpr-rules-ui-framework.php:2184
+#: ../admin/vtwpr-rules-ui-framework.php:2399
+#: ../admin/vtwpr-rules-ui-framework.php:2614
+#: ../admin/vtwpr-rules-ui-framework.php:2829
+msgid ""
+"\"Customer Rule Limit\" may only be: \"None\" or \"Max Rule Usage Count per "
+"Customer?\" , When \"Automatically Add Free Product to Cart\" is Selected"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1546
+#: ../admin/vtwpr-rules-ui-framework.php:1762
+#: ../admin/vtwpr-rules-ui-framework.php:1977
+#: ../admin/vtwpr-rules-ui-framework.php:2192
+#: ../admin/vtwpr-rules-ui-framework.php:2407
+#: ../admin/vtwpr-rules-ui-framework.php:2622
+#: ../admin/vtwpr-rules-ui-framework.php:2837
+msgid ""
+"\"Discount per Product Maximum\" may only be: \"No Cumulative Product Max\" "
+"or \"Unit Quantity - Cumulative Product Max\" , When \"Automatically Add "
+"Free Product to Cart\" is Selected"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1554
+#: ../admin/vtwpr-rules-ui-framework.php:1770
+#: ../admin/vtwpr-rules-ui-framework.php:1985
+#: ../admin/vtwpr-rules-ui-framework.php:2200
+#: ../admin/vtwpr-rules-ui-framework.php:2415
+#: ../admin/vtwpr-rules-ui-framework.php:2630
+#: ../admin/vtwpr-rules-ui-framework.php:2845
+msgid ""
+"\"Apply this Rule Discount in Addition to Coupon Discount\" must be: \"Yes"
+"\" , When \"Automatically Add Free Product to Cart\" is Selected."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1556
+#: ../admin/vtwpr-rules-ui-framework.php:1772
+#: ../admin/vtwpr-rules-ui-framework.php:1987
+#: ../admin/vtwpr-rules-ui-framework.php:2202
+#: ../admin/vtwpr-rules-ui-framework.php:2417
+#: ../admin/vtwpr-rules-ui-framework.php:2632
+#: ../admin/vtwpr-rules-ui-framework.php:2847
+msgid ""
+"In this case, the Rule will auto add the Free product, and the Coupon will "
+"be ignored. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1564
+#: ../admin/vtwpr-rules-ui-framework.php:1780
+#: ../admin/vtwpr-rules-ui-framework.php:1995
+#: ../admin/vtwpr-rules-ui-framework.php:2210
+#: ../admin/vtwpr-rules-ui-framework.php:2425
+#: ../admin/vtwpr-rules-ui-framework.php:2640
+#: ../admin/vtwpr-rules-ui-framework.php:2855
+msgid ""
+"\"Discount Group Repeat\" must be: \"No Repeats (Apply Discount to Discount "
+"Group ONCE)\" , When \"Automatically Add Free Product to Cart\" is Selected"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1634
+#: ../admin/vtwpr-rules-ui-framework.php:2314
+msgid ""
+"\"Group Amount Type \" - Only \"buy Unit Quantity\" allowed for this setup "
+"type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1694
+#: ../admin/vtwpr-rules-ui-framework.php:2339
+msgid ""
+"\"Discount Type \" - \"For the price of\" is required for this template "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1702
+#: ../admin/vtwpr-rules-ui-framework.php:2347
+msgid ""
+"When \"For the price of\" is selected, \"Discount Applies To\" must be \"all"
+"\" "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:1709
+#: ../admin/vtwpr-rules-ui-framework.php:2354
+msgid "\"for the price of units \" is required for this template "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:2007
+#: ../admin/vtwpr-rules-ui-framework.php:2652
+msgid ""
+"\"Discount applies to\" - only \"Cheapest\" or \"Most Expensive\" allowed "
+"for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:2917
+msgid ""
+"\"Buy Repeat\" - only \"Apply the Rule Once (No Repeats)\" is allowed for "
+"this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:2922
+#: ../admin/vtwpr-rules-ui-framework.php:3076
+msgid "\"Rule repeat amount\" - no values allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3022
+#: ../admin/vtwpr-rules-ui-framework.php:3171
+msgid ""
+"\"Discount applies to\" - \"each product\" only allowed for this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3071
+msgid ""
+"\"Rule repeat condition\" - only \"Just a Single Rule Usage\" is allowed for "
+"this setup type "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3224
+#: ../admin/vtwpr-rules-ui-framework.php:3247
+msgid "Rule Usage Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3244
+msgid "Buy Repeat Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3259
+#: ../admin/vtwpr-rules-ui-framework.php:3268
+#: ../admin/vtwpr-rules-ui-framework.php:3343
+#: ../admin/vtwpr-rules-ui-framework.php:3352
+#: ../admin/vtwpr-rules-ui-framework.php:3388
+msgid "Group Amount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3271
+msgid "Group Amount Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3283
+#: ../admin/vtwpr-rules-ui-framework.php:3367
+msgid "Group Amount Applies To"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3295
+#: ../admin/vtwpr-rules-ui-framework.php:3379
+msgid "Group Amount Min/Max"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3307
+msgid "Group Amount Min/Max Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3319
+msgid "Group Repeat"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3328
+msgid "Group Repeat Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3331
+msgid "Group Repeat Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3355
+msgid "Group Amount Type Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3391
+msgid " Group Amount Min/Max Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3403
+msgid "Discount Amount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3412
+#: ../admin/vtwpr-rules-ui-framework.php:3424
+msgid "Discount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3415
+msgid "Discount Amount Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3427
+msgid "Automatically Add Free Product to Cart"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3450
+msgid "Discount Applies To"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3473
+msgid "Maximum Rule Discount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3482
+#: ../admin/vtwpr-rules-ui-framework.php:3530
+msgid "Discount Maximum for Rule Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3485
+msgid "Maximum Rule Discount Count "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3497
+msgid "Maximum Lifetime Discount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3506
+msgid "Discount Maximum for Lifetime Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3509
+msgid "Maximum Lifetime Discount Count "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3521
+msgid "Maximum Rule Cumulative Discount Type"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3533
+msgid "Maximum Rule Cumulative Discount Count "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3598
+msgid " - Rule Usage Count Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3604
+msgid "Apply Rule Once per Cart"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3605
+msgid "Unlimited, Apply to All in Catalog Filter Group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3614
+msgid "Unlimited Rule Usage per Cart "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3620
+msgid "Rule Usage Times, per Cart "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3672
+msgid " - Group Amount Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3678
+msgid "Buy Each Unit"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3679
+msgid "Each Product in Catalog Filter Group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3696
+msgid "Buy Unit Quantity "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3703
+msgid "Buy $$ Value "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3743
+#: ../admin/vtwpr-rules-ui-framework.php:4015
+msgid " - Applies to Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3749
+#: ../admin/vtwpr-rules-ui-framework.php:4021
+#: ../admin/vtwpr-rules-ui-framework.php:4215
+msgid "All Products"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3749
+msgid "(total by group)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3758
+#: ../admin/vtwpr-rules-ui-framework.php:4028
+#: ../admin/vtwpr-rules-ui-framework.php:4209
+msgid "Each Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3758
+msgid "(total by product)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3783
+#: ../admin/vtwpr-rules-ui-framework.php:4048
+msgid " - Min / Max Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3789
+#: ../admin/vtwpr-rules-ui-framework.php:3790
+#: ../admin/vtwpr-rules-ui-framework.php:4315
+#: ../admin/vtwpr-rules-ui-framework.php:4369
+#: ../admin/vtwpr-rules-ui-framework.php:4416
+msgid "None "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3804
+#: ../admin/vtwpr-rules-ui-framework.php:3805
+msgid "Minimum $$ Value "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3819
+#: ../admin/vtwpr-rules-ui-framework.php:3820
+msgid "Maximum  $$ Value "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3865
+msgid " - Group Repeat Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3871
+#: ../admin/vtwpr-rules-ui-framework.php:4054
+msgid "None"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3877
+msgid "Unlimited Discount Group Repeats"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3883
+msgid "Discount Group Repeat Count"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3940
+#: ../admin/vtwpr-rules-ui-framework.php:4120
+msgid " - Discount Amount Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3946
+msgid "Discount Each Unit"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3961
+msgid "Discount Next One (single unit)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3967
+msgid "Discount Unit Quantity"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3968
+msgid "Discount Next Unit Quantity"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3974
+msgid "Discount $$ Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3975
+msgid "Discount Next $$ Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3981
+msgid "Discount Nth Unit"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:3982
+msgid "Discount Next Nth Unit"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4021
+msgid "(total by group) "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4028
+msgid "(total by product) "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4067
+msgid "Minimum $$ Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4080
+msgid "Maximum $$ Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4126
+msgid "% Off "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4132
+msgid "$$ Off "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4138
+msgid "Fixed Unit Price $$ "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4145
+#: ../admin/vtwpr-rules-update.php:1181
+msgid "Free"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4145
+msgid "[Discount = product price]"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4167
+msgid "  Automatically Add Free Product to Cart"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4170
+msgid "(discount group must be an individual product)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4203
+msgid " - Applies to Type -"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4209
+msgid "(each product unit singly)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4215
+msgid "(all products as a group)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4221
+msgid "Cheapest Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4227
+msgid "Most Expensive Product"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4309
+msgid " - Cart Limit Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4315
+#: ../admin/vtwpr-rules-ui-framework.php:4369
+#: ../admin/vtwpr-rules-ui-framework.php:4416
+msgid "- Unlimited Discount Usage"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4315
+msgid " - Per Cart "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4321
+msgid "Cart Discount Max - Percentage of Total Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4328
+msgid "Cart Discount Max - Number of Times Used"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4335
+msgid "Cart Discount Max - $$ Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4363
+msgid " - Customer Lifetime Limit Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4369
+msgid " - Per Customer "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4375
+#: ../admin/vtwpr-rules-ui-framework.php:4376
+msgid "Max Rule repeats per Customer?"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4375
+#: ../admin/vtwpr-rules-ui-framework.php:4376
+#: ../admin/vtwpr-rules-ui-framework.php:4382
+#: ../admin/vtwpr-rules-ui-framework.php:4383
+msgid "(Ever)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4375
+msgid " (pro only)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4382
+#: ../admin/vtwpr-rules-ui-framework.php:4383
+msgid "Max $$ Discount the Customer can receive?"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4382
+msgid "(pro only)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4410
+msgid " - Product Limit Type - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4416
+msgid " - Per Product "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4422
+msgid "Product Discount Max - Percentage of Total Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4428
+msgid "Product Discount Max - Number of Times Used"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui-framework.php:4434
+msgid "Product Discount Max - $$ Value"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:128
+msgid "Wholesale Pricing"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:136
+msgid " Help! "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:136
+msgid "Tell me about Wholesale Pricing "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:137
+msgid "   Less Wholesale Pricing Help ... "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:308
+msgid "Message unused for Catalog Discount"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1006
+msgid "Plugin"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1006
+msgid "Documentation"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1008
+msgid "Back to Top"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1125
+#, php-format
+msgid "+ %s"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1278
+msgid "No Product ID was supplied."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1283
+#: ../admin/vtwpr-rules-ui.php:1286
+#: ../admin/vtwpr-rules-ui.php:1295
+#: ../admin/vtwpr-rules-ui.php:1312
+#: ../admin/vtwpr-rules-ui.php:1321
+msgid "<br><br>Product ID in error = <span id=\"varProdID-error-ID\">"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1283
+#: ../admin/vtwpr-rules-ui.php:1286
+#: ../admin/vtwpr-rules-ui.php:1295
+#: ../admin/vtwpr-rules-ui.php:1312
+#: ../admin/vtwpr-rules-ui.php:1321
+msgid "</span>"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1293
+msgid "Product ID was not found. >"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1310
+#: ../admin/vtwpr-rules-ui.php:1319
+msgid "Product has no Variations. Product Name = "
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1310
+#: ../admin/vtwpr-rules-ui.php:1319
+msgid "<br><br> Please use \"Single Product Only\" option, above."
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1364
+#: ../admin/vtwpr-rules-ui.php:1366
+msgid "Wholesale Pricing: Product Include or Exclude"
+msgstr ""
+
+#: ../admin/vtwpr-rules-ui.php:1366
+msgid "(Available with the Pro plugin)"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:56
+msgid "The Rule needs to have a Title, but Title is empty."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:105
+msgid "Blueprint choices not yet completed"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:112
+msgid "Deal Type choice not yet made"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:183
+msgid ""
+"The \"Maximum Rule Discount for the Cart\" option chosen is only available "
+"in the Pro Version. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:183
+#: ../admin/vtwpr-rules-update.php:278
+#: ../admin/vtwpr-rules-update.php:336
+#: ../admin/vtwpr-rules-update.php:535
+#: ../admin/vtwpr-rules-update.php:542
+#: ../admin/vtwpr-rules-update.php:565
+msgid " * Option restored to default value, * Please Update to Confirm!"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:201
+msgid "Checkout Short Message is required."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:238
+msgid ""
+"With this Rule Template chosen, \"Apply this Rule Discount in Addition to "
+"Other Rule Discounts\" must = \"No\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:251
+msgid ""
+"With this Rule Template chosen, \"Rule Discount in addition to Product Sale "
+"Pricing\" must = \"Does not apply when Product Sale Priced\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:260
+msgid ""
+"With this Rule Template chosen, \" Apply Rule Discount in addition to Coupon "
+"Discount?\" must = \"No\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:278
+msgid ""
+"The \" Product Filter Selection\" option chosen is only available in the Pro "
+"Version. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:296
+msgid ""
+"\"Buy\" Group Selection - Single with Variations may not be chosen when "
+"\"Apply Price Reduction to Products in the Catalog\" Wholesale Pricing Type "
+"is chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:303
+msgid ""
+"\"Apply this Rule Discount in addition to Product Sale Pricing\" must not be "
+"\"No\" when \"Apply Price Reduction to Products in the Catalog\" Wholesale "
+"Pricing Type is chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:336
+msgid ""
+"The \"Get Group Selection\" option chosen is only available in the Pro "
+"Version. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:357
+msgid ""
+"\"Buy Unit Quantity\" required for Discount Type \"For the Price of (Units) "
+"Discount\""
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:364
+msgid ""
+"\"Buy Unit Quantity\" must be > 1 for Discount Type \"For the Price of "
+"(Units) Discount\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:372
+msgid ""
+"\"Buy Unit Quantity\" must be greater than Discount Type \"Discount For the "
+"Price of Units\", when \"For the Price of (Units) Discount\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:381
+msgid ""
+"\"Get Unit Quantity\" required for Discount Type \"For the Price of (Units) "
+"Discount\""
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:388
+msgid ""
+"\"Get Unit Quantity\" must be > 1 for Discount Type \"For the Price of "
+"(Units) Discount\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:396
+msgid ""
+"\"Get Unit Quantity\" must be greater than Discount Type \"Discount For the "
+"Price of Units\", when \"For the Price of (Units) Discount\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:404
+msgid ""
+"To use Discount Type \"For the Price of (Units) Discount\", choose a \"For "
+"the Price Of\" template type."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:417
+msgid ""
+"\"Buy Unit Quantity\" required for Discount Type \"For the Price of "
+"(Currency) Discount\""
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:424
+msgid ""
+"\"Buy Unit Quantity\" must be > 1 for Discount Type \"For the Price of "
+"(Currency) Discount\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:433
+msgid ""
+"\"Get Unit Quantity\" required for Discount Type \"For the Price of "
+"(Currency) Discount\""
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:440
+msgid ""
+"\"Get Unit Quantity\" must be > 1 for Discount Type \"For the Price of "
+"(Currency) Discount\"."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:448
+msgid ""
+"To use Discount Type \"For the Price of (Currency) Discount\", choose a "
+"\"For the Price Of\" template type."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:464
+msgid ""
+"Buy Amount type must be Quantity or Currency, when Discount \"Applies To "
+"Cheapest/Most Expensive\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:471
+msgid ""
+"Buy Amount Count must be greater than 1, when Discount \"Applies To Cheapest/"
+"Most Expensive\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:481
+msgid ""
+"Get Amount type must be Quantity or Currency, when Discount \"Applies To "
+"Cheapest/Most Expensive\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:488
+msgid ""
+"Get Amount Count must be greater than 1, when Discount \"Applies To Cheapest/"
+"Most Expensive\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:496
+msgid ""
+"Please choose a \"Cheapest/Most Expensive\" template type, when Discount "
+"\"Applies To Cheapest/Most Expensive\" chosen."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:514
+msgid ""
+"\"Action\" Group Selection - Single with Variations may not be chosen when "
+"\"Apply Price Reduction to Products in the Catalog\" Wholesale Pricing Type "
+"is chosen, due to a WPEC limitation."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:521
+msgid ""
+"\"Apply this Rule Discount in addition to Product Sale Pricing\" must not be "
+"\"No\" when \"Apply Price Reduction to Products in the Catalog\" Wholesale "
+"Pricing Type is chosen, due to a WPEC limitation."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:535
+msgid ""
+"The \"Maximum Discounts per Customer (for Lifetime of the rule)\" option "
+"chosen is only available in the Pro Version "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:542
+msgid ""
+"The \"Cart Maximum for all Discounts Per Product\" option chosen is only "
+"available in the Pro Version. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:565
+msgid ""
+"The \" Automatically Add Free Product to Cart\" option chosen is only "
+"available in the Pro Version. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:624
+#: ../admin/vtwpr-rules-update.php:638
+#: ../admin/vtwpr-rules-update.php:655
+#: ../admin/vtwpr-rules-update.php:669
+#: ../admin/vtwpr-rules-update.php:689
+#: ../admin/vtwpr-rules-update.php:703
+#: ../admin/vtwpr-rules-update.php:721
+#: ../admin/vtwpr-rules-update.php:735
+msgid ""
+"When \"Automatically Add Free Product to Cart\" is Selected, no other Auto "
+"Add Rule may have the same product as the Discount Group.  CONFLICTING RULE "
+"NAME is: "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:872
+msgid "Scheduling requires setup"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:905
+msgid "End Date must be Greater than or equal to Begin Date."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:918
+msgid "Please repair date error."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:970
+msgid "* For</span><!-- 001 --> any item,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:974
+msgid "* For</span><!-- 002 --> any item within the defined Buy group,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:978
+msgid "* Buy</span><!-- 003 --> any item,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:982
+msgid "* Buy</span><!-- 005 --> any item within the Buy defined group,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:986
+msgid "* Buy</span><!-- 007 --> "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:992
+msgid "any item within the defined Buy group,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:996
+msgid "one item within the defined Buy group,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1001
+#: ../admin/vtwpr-rules-update.php:1090
+msgid " units"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1007
+#: ../admin/vtwpr-rules-update.php:1096
+msgid "every"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1009
+#: ../admin/vtwpr-rules-update.php:1098
+msgid "th unit "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1019
+#: ../admin/vtwpr-rules-update.php:1107
+msgid " for a mininimum of "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1024
+#: ../admin/vtwpr-rules-update.php:1112
+msgid " for a maxinimum of "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1032
+msgid " within the Buy group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1036
+msgid " of each product quantity of the defined Buy group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1052
+#: ../admin/vtwpr-rules-update.php:1058
+#: ../admin/vtwpr-rules-update.php:1061
+#: ../admin/vtwpr-rules-update.php:1068
+#: ../admin/vtwpr-rules-update.php:1071
+msgid "* Get "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1061
+msgid "the  Product Filter "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1068
+msgid "the Next - "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1077
+msgid "any item"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1079
+#: ../admin/vtwpr-rules-update.php:1085
+msgid "within the defined Get group,"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1083
+msgid "one item"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1120
+msgid " within the Get group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1124
+msgid " of each product quantity of the defined Get group"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1140
+msgid "each product "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1145
+msgid "all products"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1150
+msgid "cheapest product in the group "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1154
+msgid "most expensive product in the group "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1166
+msgid "* For "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1170
+#, php-format
+msgid "% off"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1174
+msgid " off"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1185
+msgid "the Group Price of $"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1194
+msgid " when catalog displays."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1198
+msgid " when added to cart."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1217
+msgid " Acts on the Whole Store "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1219
+msgid " The  Product Filter is the Whole Store "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1226
+msgid " Acts on the any Product in the Cart "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1228
+msgid "  Product Filter is any Product in the Cart "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1282
+msgid ""
+"Once the Buy group threshhold has been reached, the action group repeats an "
+"unlimited number of times. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1287
+msgid ""
+"Once the Buy group threshhold has been reached, the action group repeats "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1289
+#: ../admin/vtwpr-rules-update.php:1307
+msgid " times. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1300
+msgid "The entire rule repeats an unlimited number of times. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1305
+msgid "The entire rule repeats "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1324
+#: ../admin/vtwpr-rules-update.php:1329
+msgid " Discount Cart Maximum set at "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1326
+#: ../admin/vtwpr-rules-update.php:1345
+#: ../admin/vtwpr-rules-update.php:1364
+msgid "% "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1331
+#: ../admin/vtwpr-rules-update.php:1350
+#: ../admin/vtwpr-rules-update.php:1369
+msgid " times it can be applied. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1334
+msgid " Discount Cart Maximum set at $$"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1343
+#: ../admin/vtwpr-rules-update.php:1348
+msgid " Discount Lifetime Maximum set at "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1353
+msgid " Discount Lifetime Maximum set at $$"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1362
+msgid " Discount Cumulative Maximum set at "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1367
+msgid " Discount Cumulative_cum Maximum set at "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1372
+msgid " Discount Cumulative Maximum set at $$"
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1463
+msgid " is required. Please select an option."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1502
+msgid " is required. Please enter a value."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1505
+msgid " must have a value when a count option chosen in "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1512
+msgid ""
+" is required and not numeric. Please enter a numeric value <em>only</em>."
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1515
+msgid ""
+" is not numeric, and must have a value value when a count option chosen in "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1537
+msgid " - when Units are selected, the number must be greater than zero. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1546
+msgid " - when Units are selected, no decimals are allowed. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1557
+msgid ""
+" - when For the Price of (Currency) is selected, the amount must be greater "
+"than zero. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1565
+msgid ""
+" - when For the Price of (Currency) is selected, up to 2 decimal places "
+"<em>only</em>  are allowed. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1575
+msgid " - when Currency is selected, the amount must be greater than zero. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1584
+msgid ""
+" - when Currency is selected, up to 2 decimal places <em>only</em>  are "
+"allowed. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1595
+msgid " - when Fixed Price is selected, the amount must be greater than zero. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1604
+msgid ""
+" - when Fixed Price is selected, up to 2 decimal places <em>only</em>  are "
+"allowed. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1615
+msgid " - when Percent is selected, the amount must be greater than zero. "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1623
+msgid ""
+" - the Percent value must be greater than 1.  For example 10% would be "
+"\"10\", not \".10\" . "
+msgstr ""
+
+#: ../admin/vtwpr-rules-update.php:1640
+msgid " is required. Please enter a description."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:33
+#: ../admin/vtwpr-setup-options.php:34
+msgid "Wholesale Pricing Settings"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:43
+msgid "Upgrade to Wholesale Pricing Pro"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:44
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:52
+#: ../admin/vtwpr-setup-options.php:53
+msgid "Wholesale Pricing Help"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:72
+#: ../admin/vtwpr-setup-options.php:73
+msgid "Wholesale Pricing Categories"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:780
+msgid "Catalog Price Display<span id=\"vtwpr-catalog-options-anchor\"></span>"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:788
+msgid "Show Catalog Discount Price Crossout"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:793
+msgid ""
+"Do we show the original price with a crossout, followed by the sale price?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:831
+msgid "Processing Options<span id=\"vtwpr-processing-options-anchor\"></span>"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:850
+msgid "Product Discount Max % Override"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:855
+msgid "Product Discount max percentage"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1027
+msgid ""
+"System and Debug Options<span id=\"vtwpr-system-options-anchor\"></span>"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1034
+msgid "Select "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1034
+msgid "Store "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1034
+msgid "Time Zone"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1039
+msgid "Select Store Time Zone"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1056
+msgid "Test Debugging Mode Turned On"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1056
+msgid "(Use Only during testing)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1061
+msgid "Show any built-in debug info for Rule processing."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1297
+msgid ""
+"When a Catalog Rule Discount rule is applied, the Old Price and You Save "
+"Messages can be displayed."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1297
+#: ../admin/vtwpr-setup-options.php:1318
+msgid "See"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1298
+#: ../admin/vtwpr-setup-options.php:1319
+#: ../admin/vtwpr-setup-options.php:1343
+#: ../admin/vtwpr-setup-options.php:1360
+#: ../admin/vtwpr-setup-options.php:1418
+#: ../admin/vtwpr-setup-options.php:1504
+#: ../admin/vtwpr-setup-options.php:1527
+#: ../admin/vtwpr-setup-options.php:1544
+#: ../admin/vtwpr-setup-options.php:1568
+#: ../admin/vtwpr-setup-options.php:1587
+#: ../admin/vtwpr-setup-options.php:1605
+#: ../admin/vtwpr-setup-options.php:1621
+#: ../admin/vtwpr-setup-options.php:1638
+#: ../admin/vtwpr-setup-options.php:1655
+#: ../admin/vtwpr-setup-options.php:1671
+#: ../admin/vtwpr-setup-options.php:1688
+#: ../admin/vtwpr-setup-options.php:1705
+#: ../admin/vtwpr-setup-options.php:1722
+#: ../admin/vtwpr-setup-options.php:1739
+#: ../admin/vtwpr-setup-options.php:1753
+#: ../admin/vtwpr-setup-options.php:1773
+#: ../admin/vtwpr-setup-options.php:1790
+#: ../admin/vtwpr-setup-options.php:1805
+#: ../admin/vtwpr-setup-options.php:1820
+#: ../admin/vtwpr-setup-options.php:1835
+#: ../admin/vtwpr-setup-options.php:1848
+#: ../admin/vtwpr-setup-options.php:1863
+#: ../admin/vtwpr-setup-options.php:1898
+#: ../admin/vtwpr-setup-options.php:1911
+#: ../admin/vtwpr-setup-options.php:1929
+#: ../admin/vtwpr-setup-options.php:1942
+#: ../admin/vtwpr-setup-options.php:1959
+#: ../admin/vtwpr-setup-options.php:1974
+#: ../admin/vtwpr-setup-options.php:2007
+#: ../admin/vtwpr-setup-options.php:2035
+#: ../admin/vtwpr-setup-options.php:2050
+#: ../admin/vtwpr-setup-options.php:2066
+#: ../admin/vtwpr-setup-options.php:2081
+#: ../admin/vtwpr-setup-options.php:2096
+#: ../admin/vtwpr-setup-options.php:2137
+#: ../admin/vtwpr-setup-options.php:2157
+#: ../admin/vtwpr-setup-options.php:2183
+msgid "More Info"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1301
+msgid ""
+"In order to show Old Price and You Save Messages when a Catalog Rule "
+"Discount rule is applied"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1302
+msgid ""
+", change \"wpsc_the_product_price_display()\" to "
+"\"vtwpr_the_product_price_display()\" in the single product view, grid view,"
+"list view theme files, as documented in \n"
+"           the Wholesale Pricing plugin files to be found in WPSC-intgration/"
+"Sample wpsc-theme 3.8.9+."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1304
+#: ../admin/vtwpr-setup-options.php:1326
+msgid ""
+"At that point, the Old Price and You Save messages will be automatically "
+"generated across all of the edited files."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1305
+msgid "In order to control the messaging "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1305
+#: ../admin/vtwpr-setup-options.php:1327
+msgid "by file type"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1305
+#: ../admin/vtwpr-setup-options.php:1327
+msgid ", add one or both of the array parameters as follows:"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1306
+#: ../admin/vtwpr-setup-options.php:1328
+msgid ""
+" vtwpr_the_product_price_display( array( \"output_old_price\" => false ) );  "
+"=> Turns off the Old Price messages"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1307
+#: ../admin/vtwpr-setup-options.php:1329
+msgid ""
+" vtwpr_the_product_price_display( array( \"output_you_save\" => false ) );  "
+"=> Turns off the You Save message"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1308
+#: ../admin/vtwpr-setup-options.php:1330
+msgid ""
+" vtwpr_the_product_price_display( array( \"output_old_price\" => false, "
+"\"output_you_save\" => false ) );  => Turns off both messages"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1318
+msgid ""
+"Wholesale Pricing Description Messages can be shown anywhere in Theme, both "
+"inside and outside the loop. "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1322
+msgid ""
+"Wholesale Pricing Description Messages can be shown anywhere in Theme, both "
+"inside and outside the loop.  They can be shown for\n"
+"                the entire site (store-wide discounts), by product category, "
+"by wholesale pricing custom taxonomy, by product, by rule - \n"
+"                both inside the loop and outside, as documented in \n"
+"                the Wholesale Pricing plugin files to be found in WPSC-"
+"intgration/Sample wpsc-theme 3.8.9+."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1327
+msgid "In order to control the messaging"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1340
+#: ../admin/vtwpr-setup-options.php:1357
+#: ../admin/vtwpr-setup-options.php:1500
+#: ../admin/vtwpr-setup-options.php:1601
+#: ../admin/vtwpr-setup-options.php:1617
+#: ../admin/vtwpr-setup-options.php:1667
+#: ../admin/vtwpr-setup-options.php:1684
+#: ../admin/vtwpr-setup-options.php:1701
+#: ../admin/vtwpr-setup-options.php:1718
+#: ../admin/vtwpr-setup-options.php:1735
+#: ../admin/vtwpr-setup-options.php:1894
+#: ../admin/vtwpr-setup-options.php:1925
+#: ../admin/vtwpr-setup-options.php:2003
+#: ../admin/vtwpr-setup-options.php:2032
+#: ../admin/vtwpr-setup-options.php:2047
+#: ../admin/vtwpr-setup-options.php:2063
+#: ../admin/vtwpr-setup-options.php:2078
+#: ../admin/vtwpr-setup-options.php:2093
+msgid "Yes"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1341
+#: ../admin/vtwpr-setup-options.php:1358
+#: ../admin/vtwpr-setup-options.php:1501
+#: ../admin/vtwpr-setup-options.php:1602
+#: ../admin/vtwpr-setup-options.php:1618
+#: ../admin/vtwpr-setup-options.php:1668
+#: ../admin/vtwpr-setup-options.php:1685
+#: ../admin/vtwpr-setup-options.php:1702
+#: ../admin/vtwpr-setup-options.php:1719
+#: ../admin/vtwpr-setup-options.php:1736
+#: ../admin/vtwpr-setup-options.php:1895
+#: ../admin/vtwpr-setup-options.php:1926
+#: ../admin/vtwpr-setup-options.php:2004
+#: ../admin/vtwpr-setup-options.php:2031
+#: ../admin/vtwpr-setup-options.php:2046
+#: ../admin/vtwpr-setup-options.php:2062
+#: ../admin/vtwpr-setup-options.php:2077
+#: ../admin/vtwpr-setup-options.php:2092
+msgid "No"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1345
+msgid ""
+"For a Catalog Template Rule, Do we show the original price with a crossout, "
+"followed by the sale price?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1348
+msgid ""
+"Useful if an item or group of items are on sale, independant of wholesale "
+"pricing..."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1362
+msgid ""
+"For a Catalog Template Rule deal where a Product with variations has only "
+"some of the variations on sale, do we show an addtional \"one of these are "
+"on sale\" meessage\n"
+"            saying \"one/some of these are on sale and rule messages are "
+"displayed\"?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1366
+msgid ""
+"\"A Display (catlog) wholesale pricing is in force.  It acts on a product "
+"with multiple variations, but only some have a price reduction."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1367
+msgid "Instead of a \"yousave\" message, show either:"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1368
+msgid "\"One of these are on sale\""
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1369
+msgid "\"Some of these are on sale\"."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1371
+msgid ""
+"When messages are requested via the "
+"\"vtwpr_show_product_realtime_discount_full_msgs_action\", the \"one of "
+"these are on sale\" message will display also."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1387
+msgid "Host Server already in the correct Time Zone"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1417
+msgid "Find Your GMT Time Zone"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1420
+msgid ""
+"(Your host server can have a Different Time Zone and *Date* than your store, "
+"which can throw off Rule begin/end dates.)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1424
+msgid ""
+"Please select the GMT value which matches the Store Location Time Zone.  "
+"This helps the date ranges in the Rule setup to be as accurate\n"
+"              as possible.  They will now be anywhere from accurate to 1 "
+"hour off (because of Daylight Savings, different the world over)."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1427
+msgid ""
+"Your host server can have a different date than your store, depending on "
+"time of day!"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1429
+msgid "You can find your store GMT timezone in"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1431
+msgid "Find Your GMT Time Zone\">Find Your GMT Time Zone"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1433
+msgid ""
+"**If the time zone setting has no affect on the store, Check your php ini "
+"file whether timezone is set.**"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1445
+msgid ""
+"Product Qty changes always considered to be purchases - auto adds added to "
+"the qty"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1446
+msgid ""
+"Auto adds applied to qty 1st time. Changed quantity = combined total of both "
+"purchases and auto adds"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1448
+msgid "SEE => More Info"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1450
+msgid "(1) a rule is set up to be BOGO, and"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1452
+msgid ""
+"(2) both the Buy and Action Filter groups apply to the same product, and"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1454
+msgid "(3) the auto Add Free Product switch is on:"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1456
+msgid "This setting controls that Auto Add behavior."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1458
+msgid ""
+"Default behavior:  any change to the quantity field for the BOGO product is "
+"treated as a purchase, and the auto adds are then added to that quantity."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1460
+msgid ""
+"For example: Initial purchase qty =2 units.  Result = 2 units purchased + 2 "
+"units free, for a total of 4 units."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1462
+msgid ""
+"AFTER THE INITIAL ADD TO CART, If customer then CHANGES THE QTY to 5 units, "
+"the AUTO ADDS ARE APPLIED TO THAT QUANTTY.  Result = 5 units purchased + 5 "
+"units free, for a total of 10 units."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1464
+msgid ""
+"Optional behavior:  Only the first purchase the BOGO product is treated as a "
+"purchase, and the auto adds are then added to that quantity."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1466
+msgid ""
+"For example: Initial purchase qty =2 units.  *** Result = 2 units purchased "
+"+ 2 units free, for a total of 4 units *** ."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1468
+msgid ""
+"AFTER THE INITIAL ADD TO CART, If customer then CHANGES THE QTY that "
+"quantity becomes the TOTAL TARGET OF PURCHASES + AUTO ADDS."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1470
+msgid ""
+"For example a CHANGED QTY of 7 REMAINS AT 7, CONTAINING: *** 4 purchased + 3 "
+"free *** ."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1507
+msgid ""
+"The \"Use Customer Rule Limits\" switch is a Store-Wide switch for the whole "
+"installation,\n"
+"        and must be set to \"Yes\" in order for individual Rule-based "
+"Customer Rule Limit switches to be active."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1511
+msgid ""
+"This switch controls both the active testing of Customer Rule Limits, and "
+"the\n"
+"        storage of historical purchase data for future Customer Rule Limit "
+"checking.  Customer Rule Limit checking data will only be stored if this "
+"switch = \"yes\""
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1517
+msgid ""
+"Checking by IP is immediately available at Shortcode time,, at Add to Cart "
+"time and at Checkout time."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1529
+msgid ""
+"Store-Wide \"no more than\" Product limit (Free products are exempt from "
+"this limit)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1532
+msgid ""
+"Set an absolute Product Discount max percentage, below which no discount "
+"will go - Store-Wide Setting => all accumulated discounts applied to a "
+"product may not go below this percentage"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1533
+#: ../admin/vtwpr-setup-options.php:2142
+#: ../admin/vtwpr-setup-options.php:2162
+msgid "Blank = do not use. "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1534
+msgid "Default = blank"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1547
+msgid ""
+"Product Discount max Percentage Message.  Message must be both filled in "
+"here, and requested via theme customization\n"
+"              using the "
+"\"vtwpr_show_product_discount_limit_reached_short_msg_action\" documented in "
+"the readme."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1550
+msgid "** The message is shown in cart and checkout only **"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1552
+msgid ""
+"and will only appear when the Product Discount Max Percentage limit has been "
+"reached."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1554
+msgid "Default value = \"System Max xx% Discount reached.\"."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1565
+msgid "Grouped by Rule within Product"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1566
+#: ../admin/vtwpr-setup-options.php:1584
+msgid "Grouped by Product "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1570
+msgid ""
+"If Checkout Discount detail lines are to be displayed, how are they "
+"organized?  By Rule, there will be a separate line by Rule for each product "
+"which got a discount based on that rule.\n"
+"              You can elect to show the relevant Rule short cart message in "
+"a line above each detail line."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1573
+#: ../admin/vtwpr-setup-options.php:1592
+msgid ""
+"By product totals up all discounts accrued to that product, and produces a "
+"single detail line."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1583
+msgid "Grouped by Rule within Product "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1589
+msgid ""
+"If Cart Widget Discount detail lines are to be displayed, how are they "
+"organized?  By Rule, there will be a separate line by Rule for each product "
+"which got a discount based on that rule.\n"
+"              You can elect to show the relevant Rule short cart message in "
+"a line above each detail line."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1608
+msgid ""
+"When discount details display, do we show the Short Checkout Message above "
+"Rule Product Discount detail line?  Only applicable if Checkout \"Grouped by "
+"Rule\" chosen above."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1624
+msgid ""
+"When discount details display, do we show the Short Checkout Message above "
+"Rule Product Discount detail line? Only applicable if Cart Widget \"Grouped "
+"by Rule\" chosen above."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1633
+#: ../admin/vtwpr-setup-options.php:1634
+#: ../admin/vtwpr-setup-options.php:1650
+#: ../admin/vtwpr-setup-options.php:1651
+msgid "Yes - Show "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1633
+msgid "After Discounts"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1634
+#: ../admin/vtwpr-setup-options.php:1651
+msgid "Before Discounts "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1635
+#: ../admin/vtwpr-setup-options.php:1652
+msgid "No - No New Subtotal Line "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1635
+#: ../admin/vtwpr-setup-options.php:1652
+msgid "for Cart Purchases "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1641
+msgid ""
+"Do we show the purchases subtotal before discounts, with discounts or not at "
+"all?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1650
+msgid "After Discounts "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1658
+msgid ""
+"Do we show the purchases subtotal before discounts, with discounts or not at "
+"all? (Default = no)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1674
+msgid ""
+"When Checkout Discounts are taken, do we show a separate discount totals "
+"line?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1691
+msgid ""
+"When Cart Widget Discounts are taken, do we show a separate discount totals "
+"line?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1708
+msgid ""
+"Do we show Checkout discount detail lines, or just show the discount grand "
+"total?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1725
+msgid "Do we show cartWidget discount detail lines?"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1742
+msgid ""
+"\"Test Debugging Mode Turned On\" => \n"
+"  Set this to \"yes\" if you want to see the full rule structures which "
+"produce any error messages. **ONLY** should be used during testing."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1756
+msgid ""
+"\"Custom Error Message CSS at Checkout Time\" => \n"
+"          The CSS used for maximum amount error messages is supplied.  If "
+"you want to override any of the css, supply just your overrides here. "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1759
+msgid "For Example => div.vtwpr-error .red-font-italic {color: green;}"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1769
+msgid "Yes - Use the Plugin CSS file "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1770
+msgid "No - Don\"t use the Plugin CSS file "
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1775
+msgid ""
+"(Shutting off the Plugin CSS file allows you to create your own custom CSS "
+"and place it in your theme CSS file directly.)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1779
+msgid ""
+"An alternative to supplying custom override CSS in the options here, is to "
+"shut off the plugin front end\n"
+"              CSS entirely.  This would allow you to supply all the CSS "
+"relevant to this plugin yourself,\n"
+"              altered to suit, in your Theme."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1792
+#: ../admin/vtwpr-setup-options.php:1807
+#: ../admin/vtwpr-setup-options.php:1822
+#: ../admin/vtwpr-setup-options.php:1837
+msgid "(suggested: \"-\" (minus sign) or \"cr\" (credit) )"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1795
+msgid ""
+"When showing a checkout credit detail line, this is a label which is just to "
+"the left of the currency sign, indicating that this is a credit."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1810
+msgid ""
+"When showing a checkout credit total line, this is a label which is just to "
+"the left of the currency sign, indicating that this is a credit."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1825
+msgid ""
+"When showing a cartWidget credit detail line, this is a label which is just "
+"to the left of the currency sign, indicating that this is a credit."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1840
+msgid ""
+"When showing a cartWidget credit total line, this is a label which is just "
+"to the left of the currency sign, indicating that this is a credit."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1851
+msgid "When showing a checkout credit detail line, this is title."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1853
+msgid "Default value = \"Subtotal - Cart Purchases:\"."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1866
+msgid "When showing a checkout credit total line, this is a title."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1868
+msgid "Default value = \"Cart Discount Total:\"."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1901
+#: ../admin/vtwpr-setup-options.php:1932
+msgid ""
+"(If you want a new subtotal line to show after the Purchased Products and "
+"Discounts have been totaled, and your theme does not already do so...)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1914
+#: ../admin/vtwpr-setup-options.php:1945
+msgid ""
+"If you want a new subtotal line to show after the Purchased Products and "
+"Discounts have been totaled, and your theme does not already do so, this is "
+"the label to use."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1916
+#: ../admin/vtwpr-setup-options.php:1947
+msgid "Default value = \"Subtotal with Discount\""
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1962
+msgid "When showing a cartWidget credit detail line, this is title."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1964
+msgid "Default value = \"Products:\"."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1977
+msgid "When showing a cartWidget credit total line, this is a title."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:1979
+msgid "Default value = \"Discounts:\"."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2010
+msgid ""
+"\"Check Customer against Rule Purchase History, by IP\" => When using "
+"Customer Rule Limits, use IP to identify the customer.  Immediately avalable "
+"at Add to Cart time."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2013
+msgid ""
+"This switch should always be set to \"Yes\" - check by ip is done at "
+"shortcode time, add to cart time and checkout time."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2017
+msgid ""
+"<span>The remainder of the Customer Rule Limit checks by user-supplied info, "
+"only happen when the User clicks the \"Pay\" button at Checkout Time ."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2019
+msgid ""
+" - The Customer Rule Limit checks are applied, and if the discount amounts "
+"have to be reduced, the User is returned to Checkout."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2021
+msgid ""
+" - An error message can be displayed, highlighting the discount and total "
+"changes.  When the User accepts the discount reduction\n"
+"        and hits the \"Pay\" button again, the transaction is then processed."
+"</span>"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2038
+msgid ""
+"\"Check Customer against Rule Purchase History, by Email\" => When using "
+"Customer Rule Limits, use email to identify the customer."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2053
+msgid ""
+"\"Check Customer against Rule Purchase History, by Billto Name\" => When "
+"using Customer Rule Limits, use billto name to identify the customer."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2069
+msgid ""
+"\"Check Customer against Rule Purchase History, by Billto addr\" => When "
+"using Customer Rule Limits, use billto addr to identify the customer."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2084
+msgid ""
+"\"Check Customer against Rule Purchase History, by Shipto Name\" => When "
+"using Customer Rule Limits, use shipto name to identify the customer."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2099
+msgid ""
+"\"Check Customer against Rule Purchase History, by Shipto addr\" => When "
+"using Customer Rule Limits, use shipto addr to identify the customer."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2140
+msgid ""
+"\"Show Error Messages Just Before Checkout Products List - HTML Selector\" "
+"=> \n"
+"        This option controls the location of the message display."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2143
+#: ../admin/vtwpr-setup-options.php:2163
+#: ../admin/vtwpr-setup-options.php:2192
+msgid "Default = \""
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2144
+#: ../admin/vtwpr-setup-options.php:2164
+msgid ""
+"If you\"ve changed this value and can\"t get it to work, you can use the "
+"\"reset to defaults\" button (just below the \"save changes\" button) to get "
+"the value back (snapshot your other settings first to help you quickly set "
+"the other settings back the way to what you had before.)"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2147
+msgid "Blank = do not display error message before Checkout Products List"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2160
+msgid ""
+"\"Show Error Messages Just Before Checkout Address  List - HTML Selector\" "
+"=> \n"
+"        This option controls the location of the message display."
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2167
+msgid "Blank = do not display error message before Checkout Address List"
+msgstr ""
+
+#: ../admin/vtwpr-setup-options.php:2186
+msgid ""
+"\"Customer Rule Limit - Payment Button Error Message\" => Customer Rule "
+"Limits can be based on IP, which is available at all times.  However, email "
+"address, shipto and soldto address\n"
+"        are best verified at Payment Button click time.  The system rechecks "
+"any Customer Rule Limit rules, and if historical purchases are found, the "
+"discount amount is reduced in combination with the purchase history\n"
+"        which has now been found.  In order to alert the customer to the "
+"change in the discount amount, the screen returns to the Checkout screen, "
+"with this fields error message displayed.\n"
+"        The default error message informs the user why the discount has been "
+"reduced, and invites the purchaser to accept the reduced discount, and click "
+"on the Payment button a second time, to carry on\n"
+"        to the payment gateway."
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:53
+msgid "options"
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:283
+msgid "Settings Page - Checkout Discount Options"
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:393
+msgid "Settings Page"
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:529
+msgid "Settings Page - Cart Widget Discount Options"
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:823
+msgid "Wholesale Pricing Overview "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:825
+#: ../admin/vtwpr-show-help-functions.php:873
+#: ../admin/vtwpr-show-help-functions.php:892
+#: ../admin/vtwpr-show-help-functions.php:924
+#: ../admin/vtwpr-show-help-functions.php:959
+#: ../admin/vtwpr-show-help-functions.php:1004
+#: ../admin/vtwpr-show-help-functions.php:1053
+#: ../admin/vtwpr-show-help-functions.php:1081
+msgid " ... Less "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:871
+msgid "Wholesale Pricing Theme Marketing "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:890
+msgid "Group Selection Power! "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:922
+msgid "Example - REALTIME Wholesale Pricing"
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:957
+msgid "Example - BOGO Deals, Cart Purchase Pricing "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:1002
+msgid "Example - GROUP Wholesale Pricing, Cart Purchase Pricing "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:1051
+msgid "Group Selection - Using Wholesale Pricing Custom Categories "
+msgstr ""
+
+#: ../admin/vtwpr-show-help-functions.php:1079
+msgid ""
+"Group Selection - Selection by Wholesaler, Membership or Role (Display "
+"different prices for logged in users) "
+msgstr ""
+
+#: ../core/vtwpr-apply-rules.php:1335
+msgid "Discount Applied"
+msgstr ""
+
+#: ../core/vtwpr-apply-rules.php:1996
+msgid " \""
+msgstr ""
+
+#: ../core/vtwpr-apply-rules.php:1998
+msgid "\"  "
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:17
+msgid "Search Wholesale Pricing Category"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:18
+msgid "All Wholesale Pricing Categories"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:19
+#: ../core/vtwpr-backbone.php:59
+msgid "Wholesale Pricing Category"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:20
+msgid "Wholesale Pricing Category:"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:21
+msgid "Edit Wholesale Pricing Category"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:22
+msgid "Update Wholesale Pricing Category"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:23
+msgid "Add New Wholesale Pricing Category"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:24
+msgid "New Wholesale Pricing Category"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:69
+#: ../core/vtwpr-backbone.php:99
+msgid "Add New Wholesale Pricing Rule"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:70
+#: ../core/vtwpr-backbone.php:101
+msgid "Edit Wholesale Pricing Rule"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:71
+#: ../core/vtwpr-backbone.php:102
+msgid "New Wholesale Pricing Rule"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:72
+#: ../core/vtwpr-backbone.php:103
+msgid "View Wholesale Pricing Rule"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:73
+#: ../core/vtwpr-backbone.php:104
+msgid "Search Wholesale Pricing Rules"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:74
+#: ../core/vtwpr-backbone.php:105
+msgid "No Wholesale Pricing Rules found"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:75
+#: ../core/vtwpr-backbone.php:106
+msgid "No Wholesale Pricing Rules found in Trash"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:77
+#: ../core/vtwpr-backbone.php:108
+msgid "Wholesale Pricing Rules"
+msgstr ""
+
+#: ../core/vtwpr-backbone.php:100
+msgid "Edit"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-cart-validation.php:358
+msgid "Purchase error found."
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-cart-validation.php:1269
+msgid "Coupon code applied successfully."
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-cart-validation.php:1717
+msgid "Discount Quantity"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-cart-validation.php:1733
+msgid "Total Shipping:"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-cart-validation.php:1900
+msgid "Wholesale Pricing Discount"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-definitions.php:26
+msgid ""
+"Your email, bill-to or ship-to address are attached to other discounted order"
+"(s). This has affected the current order Lifetime discount limit, and "
+"resulted in the total Discount being reduced. Please hit the \"Purchase\" "
+"button a second time to complete the transaction."
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-definitions.php:44
+msgid "deals"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-definitions.php:45
+msgid "Short checkout message required"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-definitions.php:46
+#, php-format
+msgid "Get 10% off Laptops Today! (sample)"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:534
+msgid "Discounts"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:792
+msgid "Product"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:794
+msgid "Discount Qty"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:796
+#: ../woo-integration/vtwpr-parent-functions.php:1365
+#: ../woo-integration/vtwpr-parent-functions.php:1537
+msgid "Discount Amount"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:906
+msgid "Discount"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1121
+#: ../woo-integration/vtwpr-parent-functions.php:1364
+#: ../woo-integration/vtwpr-parent-functions.php:1535
+msgid "Discount Product"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1122
+#: ../woo-integration/vtwpr-parent-functions.php:1536
+msgid "Quantity"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1123
+msgid "Amount"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1129
+msgid "Discounts "
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1167
+msgid "Coupon Discount"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1171
+msgid "Coupon Discount: "
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1256
+msgid "Product: "
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1258
+msgid " Discount Units: "
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1260
+msgid " Discount Amount: "
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:1359
+msgid "Cart Discount Details"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:2197
+msgid ""
+"Message from Wholesale Pricing Plugin => WooCommerce setting \"Enable the "
+"use of coupons\" checkbox must be checked, as Wholesale Pricing cart "
+"discounts are applied using the coupon system."
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-functions.php:2199
+msgid "\"Enable the use of coupons\" reset to Checked."
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-theme-functions.php:909
+#, php-format
+msgid "Old Price: %s"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-theme-functions.php:910
+#, php-format
+msgid "Price: %s"
+msgstr ""
+
+#: ../woo-integration/vtwpr-parent-theme-functions.php:912
+#, php-format
+msgid "You save: %s"
+msgstr ""

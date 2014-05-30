@@ -10,7 +10,7 @@ class VTWPR_Parent_Definitions {
     
     define('VTWPR_PARENT_PLUGIN_NAME',                      'WooCommerce');
     define('VTWPR_EARLIEST_ALLOWED_PARENT_VERSION',         '2.0.14');  //all due to support for hook 'woocommerce_email_order_items_table' - requires the 2nd order_info variable...
-    define('VTWPR_TESTED_UP_TO_PARENT_VERSION',             '2.1.5');
+    define('VTWPR_TESTED_UP_TO_PARENT_VERSION',             '2.1.9');
     define('VTWPR_DOCUMENTATION_PATH_PRO_BY_PARENT',        'http://www.varktech.com/woocommerce/wholesale-pricing-pro-for-woocommerce/?active_tab=tutorial');                                                                                                     //***
     define('VTWPR_DOCUMENTATION_PATH_FREE_BY_PARENT',       'http://www.varktech.com/woocommerce/wholesale-pricing-for-woocommerce/?active_tab=tutorial');      
     define('VTWPR_INSTALLATION_INSTRUCTIONS_BY_PARENT',     'http://www.varktech.com/woocommerce/wholesale-pricing-for-woocommerce/?active_tab=instructions');

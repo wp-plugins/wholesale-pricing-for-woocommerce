@@ -49,8 +49,8 @@ class VTWPR_Backbone{
       $this->vtwpr_register_in_main_menu();
   }  
  
-	$role = get_role( 'administrator' );
-	$role->add_cap( 'read_vtwpr-rule' );
+//	$role = get_role( 'administrator' );    //v1.0.3 removed conflict
+//	$role->add_cap( 'read_vtwpr-rule' );    //v1.0.3 removed conflict
 }
 
   public function vtwpr_add_dummy_rule_category() {
