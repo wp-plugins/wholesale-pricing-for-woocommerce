@@ -145,7 +145,8 @@
               /*  *********************************
               ***  fill in include/exclude arrays if selected on the PRODUCT Screen (parent plugin)
               ************************************ */
-              $vtwpr_includeOrExclude_meta  = get_post_meta($product_id, $vtwpr_info['product_meta_key_includeOrExclude'], true);
+
+              $vtwpr_includeOrExclude_meta  = get_post_meta($cart_item['product_id'], $vtwpr_info['product_meta_key_includeOrExclude'], true); //v1.0.4  use the parent ID at all times!
               if ( $vtwpr_includeOrExclude_meta ) {
                 switch( $vtwpr_includeOrExclude_meta['includeOrExclude_option'] ) {
                   case 'includeAll':  
@@ -220,9 +221,34 @@
 
       $vtwpr_cart = new VTWPR_Cart;  
       $vtwpr_cart_item                = new VTWPR_Cart_Item;      
-      $post = get_post($product_id);
+      // v1.0.4  begin
+      //$post = get_post($product_id);
+  
+      //  straight get_post caused WOO to loose the plot with variable products on 1st time through...
+      //$post = get_post($product_id);
+      if ( ( !isset($post->post_name) ) ||
+           ( $post->post_name <= ' ' ) ) {
+         $post = get_post($product_id);
+      }   
+
+       //If this is a variation, get the Parent, needed below
+      $post_parent_ID = '';
+      if ( $post->ID != $product_id )   { 
+         //save ID from the Post, which is the variation Parent
+         $post_parent_ID = $post->ID;
+         //get post for current Variation
+         $post = get_post($product_id);
+      } else {
+        if ( $post->post_parent > 0 ) {
+           $post_parent_ID = $post->post_parent;
+        }
+      
+      }
+       //v1.0.4  end
    
-      //change??
+
+
+
       $vtwpr_cart_item->product_id            = $product_id;
       $vtwpr_cart_item->product_name          = $post->post_name;
       $vtwpr_cart_item->quantity              = 1;
@@ -235,15 +261,51 @@
       /*  *********************************
       ***  JUST the cat *ids* please...
       ************************************ */
-      $vtwpr_cart_item->prod_cat_list = wp_get_object_terms( $product_id, $vtwpr_info['parent_plugin_taxonomy'], $args = array('fields' => 'ids') );
-      $vtwpr_cart_item->rule_cat_list = wp_get_object_terms( $product_id, $vtwpr_info['rulecat_taxonomy'], $args = array('fields' => 'ids') );
+      //v1.0.4  begin
+      
+      //if we're on a variation, gotta use the Parent to get the taxonomies!!
+      if ($post_parent_ID) {
+        $use_this_id = $post_parent_ID;
+      } else {
+        $use_this_id = $product_id;
+      }
+      
+      $vtwpr_cart_item->prod_cat_list = wp_get_object_terms( $use_this_id, $vtwpr_info['parent_plugin_taxonomy'], $args = array('fields' => 'ids') );
+      $vtwpr_cart_item->rule_cat_list = wp_get_object_terms( $use_this_id, $vtwpr_info['rulecat_taxonomy'], $args = array('fields' => 'ids') );
+        //*************************************                    
+       
+      $vtwpr_includeOrExclude_meta  = get_post_meta($use_this_id, $vtwpr_info['product_meta_key_includeOrExclude'], true);  
+      if ( $vtwpr_includeOrExclude_meta ) {
+        switch( $vtwpr_includeOrExclude_meta['includeOrExclude_option'] ) {
+          case 'includeAll':  
+            break;
+          case 'includeList':                  
+              $vtwpr_cart_item->prod_rule_include_only_list = $vtwpr_includeOrExclude_meta['includeOrExclude_checked_list'];                                            
+            break;
+          case 'excludeList':  
+              $vtwpr_cart_item->prod_rule_exclusion_list = $vtwpr_includeOrExclude_meta['includeOrExclude_checked_list'];                                               
+            break;
+          case 'excludeAll':  
+              $vtwpr_cart_item->prod_rule_exclusion_list[0] = 'all';  //set the exclusion list to exclude all
+            break;
+        }
+      }     
+      
+      //v1.0.4  end  
+
         //*************************************                    
 
         
       //add cart_item to cart array
       $vtwpr_cart->cart_items[]       = $vtwpr_cart_item;  
       
-                
+      
+       //v1.0.4  begin
+       //restore parent $post as needed, for WOO's sanity
+      if ($post_parent_ID)   { 
+         $post = get_post($post_parent_ID);
+      }
+       //v1.0.4  end                  
   }
 
 	

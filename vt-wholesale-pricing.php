@@ -3,7 +3,7 @@
 Plugin Name: VarkTech Wholesale Pricing for WooCommerce
 Plugin URI: http://varktech.com
 Description: An e-commerce add-on for WooCommerce, supplying Wholesale Pricing functionality.
-Version: 1.0.3
+Version: 1.0.4
 Author: Vark
 Author URI: http://varktech.com
 */
@@ -32,7 +32,7 @@ ASK YOUR HOST TO TURN OFF magic_quotes_gpc !!!!!
    $vtwpr_deal_edits_framework;
    $vtwpr_template_structures_framework;
    
-   //initial setup only, overriden later in function vtprd_debug_options
+   //initial setup only, overriden later in function vtwpr_debug_options
    error_reporting(E_ERROR | E_CORE_ERROR | E_COMPILE_ERROR); //1.0.3
     
      
@@ -46,9 +46,9 @@ class VTWPR_Controller{
       header("Pragma: no-cache");
     } 
     
-		define('VTWPR_VERSION',                               '1.0.3');
+		define('VTWPR_VERSION',                               '1.0.4');
     define('VTWPR_MINIMUM_PRO_VERSION',                   '1.0.3');
-    define('VTWPR_LAST_UPDATE_DATE',                      '2014-05-29');
+    define('VTWPR_LAST_UPDATE_DATE',                      '2014-07-15');
     define('VTWPR_DIRNAME',                               ( dirname( __FILE__ ) ));
     define('VTWPR_URL',                                   plugins_url( '', __FILE__ ) );
     define('VTWPR_EARLIEST_ALLOWED_WP_VERSION',           '3.3');   //To pick up wp_get_object_terms fix, which is required for vtwpr-parent-functions.php
