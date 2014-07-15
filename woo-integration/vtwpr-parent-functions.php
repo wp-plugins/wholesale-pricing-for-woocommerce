@@ -430,6 +430,8 @@
       //store session id 'vtwpr_product_session_info_[$product_id]'
       $_SESSION['vtwpr_product_session_info_'.$product_id] = $vtwpr_info['product_session_info'];
       
+      //initialize vtprd_cart to clear all discount values...  //v1.0.4
+      $vtwpr_cart = new vtwpr_Cart;                            //v1.0.4      
   }
 
     function vtwpr_fill_variations_checklist($tax_class, $checked_list = NULL, $pop_in_out_sw, $product_ID, $product_variation_IDs) { 
