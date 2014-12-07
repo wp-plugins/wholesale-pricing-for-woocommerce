@@ -71,30 +71,40 @@ class VTWPR_Parent_Cart_Validation {
     //  variation products (priced in one a variaty of the _html filters in AJAX)
     //**********======================================================================================
         
-    add_filter('woocommerce_grouped_price_html',          array(&$this, 'vtwpr_maybe_grouped_price_html'), 10, 2);
+    //v1.0.9.0 covered by 'woocommerce_get_price_html'
+    //add_filter('woocommerce_grouped_price_html',          array(&$this, 'vtwpr_maybe_grouped_price_html'), 10, 2);
  
-    add_filter('woocommerce_variable_sale_price_html',    array(&$this, 'vtwpr_maybe_variable_sale_price_html'), 10, 2);
+    //v1.0.9.0 covered by 'woocommerce_get_price_html'
+    //add_filter('woocommerce_variable_sale_price_html',    array(&$this, 'vtwpr_maybe_variable_sale_price_html'), 10, 2);
 
-    add_filter('woocommerce_variable_price_html',         array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+    //add_filter('woocommerce_variable_price_html',         array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
     
     //normal get price
-    add_filter('woocommerce_variation_price_html',        array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+    //v1.0.9.0 covered by 'woocommerce_get_price_html'
+    //add_filter('woocommerce_variation_price_html',        array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
     //normal get price
-    add_filter('woocommerce_variation_sale_price_html',   array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
-        
-    add_filter('woocommerce_sale_price_html',             array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
-    
-    add_filter('woocommerce_price_html',                  array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
- 
-    add_filter('woocommerce_empty_price_html',            array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
-     
+    //v1.0.9.0 
+    //add_filter('woocommerce_variation_sale_price_html',   array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+    //v1.0.9.0     
+    //add_filter('woocommerce_sale_price_html',             array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+    //v1.0.9.0 
+    //add_filter('woocommerce_price_html',                  array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+     //v1.0.9.0 
+    //add_filter('woocommerce_empty_price_html',            array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+    //v1.0.9.0   new filters    
+        add_filter('woocommerce_get_price_html',              array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+        add_filter('woocommerce_get_variation_price_html',    array(&$this, 'vtwpr_maybe_catalog_price_html'), 10, 2);
+     //**********
+             
      $current_version =  WOOCOMMERCE_VERSION;
     if( (version_compare(strval('2.1.0'), strval($current_version), '>') == 1) ) {   //'==1' = 2nd value is lower     
       add_filter('woocommerce_cart_item_price_html',        array(&$this, 'vtwpr_maybe_cart_item_price_html'), 10, 3);
     } else {
       add_filter('woocommerce_cart_item_price',             array(&$this, 'vtwpr_maybe_cart_item_price_html'), 10, 3);
     }   
-
+   
+    add_action( 'wp_login',                                 array(&$this, 'vtwpr_maybe_update_cart_on_login'), 10, 2 );   //v1.0.5   re-applies rules on login immediately! 
+   
     // =====================++++++++++
     add_filter('woocommerce_get_price',                   array(&$this, 'vtwpr_maybe_get_price'), 10, 2);
     // =====================++++++++++
@@ -1095,6 +1105,21 @@ public function vtwpr_get_product_catalog_price_add_to_cart( $product_id, $param
       return;
 
    }       
+
+   //*************************************
+   // v1.0.5  new function
+   //recalc the cart if user changes, to pick up user/role-based rules
+   //*************************************
+   public function vtwpr_maybe_update_cart_on_login($user_login, $user) {
+      global $woocommerce;
+      
+      $woocommerce_cart_contents = $woocommerce->cart->get_cart();
+      if ( sizeof($woocommerce_cart_contents) > 0 ) {       
+         //this re-does the CART rules
+         $this->vtwpr_cart_updated();                     
+      }
+      return; 
+   }
 
    // do_action( 'woocommerce_add_to_cart', $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data );
    public function vtwpr_cart_updated() {
