@@ -19,7 +19,7 @@ Power your store to greater success with wholesale pricing and sales promotions!
 *   Wholesale  Discount pricing
 *   Catalog Sale Product and Variation Discount Pricing 
 *   Schedulable
-*   Works with WooCommerce 2.2+
+*   Works with WooCommerce 2.3+
 
 = The Details =
  
