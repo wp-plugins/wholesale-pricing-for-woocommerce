@@ -3,7 +3,7 @@ Contributors: vark
 Donate link: http://www.varktech.com/wp-e-commerce/wholesale-pricing-for-woocommerce/
 Tags: ecommerce, e commerce, e-commerce, commerce, WooCommerce, wordpress ecommerce, store, sales, promotion, advertising, sell, shop, shopping, cart, checkout, configurable, variable, widgets, reports, marketing, deals, price, discount, dynamic pricing, group pricing, wholesale, membership, role, promotion, bogo
 Requires at least: 3.3
-Tested up to: 4.2.4
+Tested up to: 4.3
 Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -19,7 +19,7 @@ Power your store to greater success with wholesale pricing and sales promotions!
 *   Wholesale  Discount pricing
 *   Catalog Sale Product and Variation Discount Pricing 
 *   Schedulable
-*   Works with WooCommerce 2.3+
+*   Works with WooCommerce 2.4+
 
 = The Details =
  
